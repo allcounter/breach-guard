@@ -1,0 +1,954 @@
+{
+  "layout": {
+    "metadata": {
+      "title": "Breach Guard",
+      "description": "Check if your passwords and emails have been exposed in data breaches. Free and private."
+    }
+  },
+  "common": {
+    "appName": "Breach Guard",
+    "navigation": {
+      "password": "Password",
+      "email": "Email",
+      "brokers": "Brokers",
+      "rights": "Rights"
+    },
+    "theme": {
+      "switchTo": "Switch to {theme} theme"
+    },
+    "language": {
+      "switchTo": "Switch to {language}",
+      "da": "Dansk",
+      "en": "English"
+    },
+    "attribution": {
+      "hibp": "Breach data provided by <provider>Have I Been Pwned</provider>",
+      "xon": "Breach data provided by <provider>XposedOrNot</provider>"
+    },
+    "error": {
+      "title": "Something went wrong",
+      "description": "An unexpected error occurred. Please try again.",
+      "retry": "Try again"
+    }
+  },
+  "home": {
+    "metadata": {
+      "title": "Has Your Data Been Exposed? Find Out Now | Breach Guard",
+      "description": "Check if your passwords and emails appear in known data breaches. Free, private, no account required."
+    },
+    "hero": {
+      "title": "Has your data been exposed?",
+      "description": "Check your passwords and emails against known data breaches. Free, private, no account — your data stays under your control."
+    },
+    "cards": {
+      "password": {
+        "title": "Password Check",
+        "description": "Is your password safe? Check it against known breaches — everything stays in your browser."
+      },
+      "email": {
+        "title": "Email Check",
+        "description": "Find out if your email appears in known breaches, and get actionable next steps."
+      },
+      "brokers": {
+        "title": "Broker Opt-Out",
+        "description": "Remove your personal data from data brokers with step-by-step guides."
+      },
+      "rights": {
+        "title": "GDPR Rights",
+        "description": "Know your rights and send GDPR requests with ready-to-use templates."
+      }
+    },
+    "trust": "Your data is checked against known public breaches — nothing is stored, and there are no dark web claims. <privacyLink>Read the privacy policy</privacyLink>.",
+    "badges": {
+      "noTracking": "No tracking",
+      "noAccounts": "No accounts",
+      "clientSide": "Client-side analysis",
+      "openSource": "Open source"
+    },
+    "counters": {
+      "brokers": "Data brokers",
+      "breaches": "Breaches tracked",
+      "templates": "GDPR templates",
+      "personalChecks": "Your checks"
+    }
+  },
+  "emailPage": {
+    "metadata": {
+      "title": "Email Breach Check | Breach Guard",
+      "description": "Check if your email has been exposed in known data breaches. See which services were affected and get actionable next steps to protect your accounts."
+    },
+    "heading": "Has your email been exposed?",
+    "subheading": "Enter your email to see if it appears in known data breaches. It's sent encrypted and never stored."
+  },
+  "passwordPage": {
+    "metadata": {
+      "title": "Password Check | Breach Guard",
+      "description": "Check if your password has appeared in known data breaches for free. Your password never leaves your browser — we use secure k-Anonymity technology."
+    },
+    "heading": "Password Check",
+    "subheading": "Your password never leaves your browser",
+    "explanation": "We check breaches using k-Anonymity — only a tiny hash fragment is sent, never your actual password."
+  },
+  "brokersPage": {
+    "metadata": {
+      "title": "Data Broker Opt-Out Guide | Breach Guard",
+      "description": "Remove your personal data from data brokers with our free step-by-step opt-out guides. Covers Danish, Swedish, Norwegian, and Finnish brokers."
+    },
+    "heading": "Data Broker Opt-Out Guide",
+    "subheading": "Remove your personal information from data broker sites. Each entry includes step-by-step instructions you can follow right now.",
+    "warning": "Always verify instructions on the broker's website. Opt-out processes change frequently and may need to be repeated periodically."
+  },
+  "emailForm": {
+    "placeholder": "Enter your email",
+    "submit": "Check",
+    "checking": "Checking...",
+    "errors": {
+      "network": "Could not connect. Check your internet connection and try again.",
+      "rateLimit": "We've reached our daily limit. Please try again in a few hours.",
+      "serviceUnavailable": "Service temporarily unavailable. Please try again shortly."
+    }
+  },
+  "passwordForm": {
+    "placeholder": "Enter a password to check",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "ariaLabel": "Password to check",
+    "loadingStrength": "Loading strength checker...",
+    "checkBreaches": "Check Breaches",
+    "checking": "Checking...",
+    "errors": {
+      "network": "Unable to check breaches right now. Please try again in a moment."
+    }
+  },
+  "passwordStrength": {
+    "strength": "Strength",
+    "scores": {
+      "0": "Very Weak",
+      "1": "Weak",
+      "2": "Fair",
+      "3": "Strong",
+      "4": "Very Strong"
+    },
+    "crackTime": "Estimated crack time: {time}",
+    "checkingBreaches": "Checking breaches...",
+    "found": "Found in {count, plural, one {# data breach} other {# data breaches}}",
+    "foundAdvice": "Change this password immediately. Do not use it for any accounts.",
+    "notFound": "Not found in known breaches",
+    "notFoundAdvice": "This password hasn't appeared in any known data breaches."
+  },
+  "breachResults": {
+    "noBreaches": "Good news! Your email was not found in any known breaches.",
+    "noBreachesAdvice": "Keep using strong, unique passwords and enable 2FA where available.",
+    "summary": "Your email was found in {count, plural, one {# known breach} other {# known breaches}}.",
+    "severity": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "unknown": "Unknown"
+    },
+    "colService": "Service",
+    "colDate": "Date",
+    "colAccounts": "Accounts",
+    "unknownGroup": "{count, plural, one {# breach without detailed info} other {# breaches without detailed info}}"
+  },
+  "breachGuidance": {
+    "title": "What should I do now?",
+    "steps": {
+      "changePasswords": "Change passwords on the affected services",
+      "enable2fa": "Enable two-factor authentication (2FA) everywhere",
+      "checkReuse": "Check if you reuse passwords across services",
+      "useManager": "Consider using a password manager for unique passwords"
+    }
+  },
+  "brokerGuide": {
+    "searchPlaceholder": "Search brokers...",
+    "filterAll": "All",
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    },
+    "resultCount": "{count, plural, one {# broker} other {# brokers}}",
+    "noResults": "No brokers match your search.",
+    "goToOptOut": "Go to opt-out page",
+    "note": "Note:",
+    "lastVerified": "Last verified:",
+    "region": {
+      "all": "All Regions",
+      "denmark": "Denmark",
+      "sweden": "Sweden",
+      "norway": "Norway",
+      "finland": "Finland",
+      "international": "International"
+    },
+    "category": {
+      "directory": "Directory Services",
+      "marketing": "Marketing & Advertising",
+      "credit": "Credit & Financial",
+      "government": "Government & Registry",
+      "search-engine": "Search Engines"
+    },
+    "quickWin": {
+      "title": "Quick Win for Danish Users",
+      "description": "Contact your telecom provider (TDC, Telia, Telenor, etc.) and request a 'hidden number'. This automatically removes you from Krak, De Gule Sider, and 118.dk — covering 3 brokers in one call."
+    },
+    "requiresId": "Requires national ID",
+    "dataTypes": "Data collected",
+    "dataTypeLabels": {
+      "name": "Name",
+      "address": "Address",
+      "phone": "Phone",
+      "income": "Income",
+      "credit-history": "Credit history",
+      "business-data": "Business data",
+      "search-results": "Search results",
+      "birthday": "Birthday"
+    },
+    "swedenDisclaimer": "Some Swedish brokers hold a publishing certificate (utgivningsbevis) that may exempt them from GDPR deletion requests. Removal may not be guaranteed.",
+    "regionFilter": "Region"
+  },
+  "breachTimeline": {
+    "summary": "{count} {count, plural, one {breach} other {breaches}} — oldest {minYear}, most recent {maxYear}",
+    "ariaLabel": "Breach timeline showing {count} breaches from {minYear} to {maxYear}",
+    "title": "Breach timeline: {count} breaches from {minYear} to {maxYear}",
+    "undated": "{count} {count, plural, one {breach} other {breaches}} not shown — date unknown",
+    "dismiss": "Dismiss",
+    "closeDetail": "Close detail"
+  },
+  "validation": {
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email address",
+    "emailTooLong": "Email address too long"
+  },
+  "format": {
+    "accounts": "accounts",
+    "millionAccounts": "million accounts",
+    "billionAccounts": "billion accounts",
+    "kAccounts": "k accounts"
+  },
+  "brokerSteps": {
+    "krak": {
+      "1": "Contact your telecom provider (TDC, Telia, Telenor, etc.) and request your number be set to hidden (hemmeligt nummer)",
+      "2": "Alternatively, go to opdater.krak.dk and log in with MitID",
+      "3": "Select 'Remove my information' and confirm",
+      "4": "Changes take up to 2 weeks to propagate across Krak, De Gule Sider, and 118.dk"
+    },
+    "degulesider": {
+      "1": "Contact your telecom provider and request a hidden number",
+      "2": "Or visit degulesider.dk/hjaelp/personsoeg and follow the instructions",
+      "3": "Shares database with Krak — removal from one covers both",
+      "4": "Takes up to 2 weeks for changes to appear"
+    },
+    "118dk": {
+      "1": "Contact your telecom provider and request your number be hidden",
+      "2": "Updates within 1 working day after your provider processes the request",
+      "3": "No direct opt-out form — removal happens through your telecom provider"
+    },
+    "robinsonlisten": {
+      "1": "Log in to borger.dk with MitID",
+      "2": "Navigate to CPR self-service",
+      "3": "Register for the Robinson List (marketing opt-out)",
+      "4": "Takes up to 3 months for all companies to stop marketing"
+    },
+    "navneadressebeskyttelse": {
+      "1": "Log in to borger.dk with MitID",
+      "2": "Navigate to 'Navne- og adressebeskyttelse'",
+      "3": "Apply for name and address protection",
+      "4": "Protection lasts 1 year and must be renewed annually"
+    },
+    "experian-rki": {
+      "1": "Visit dininfo.dk to check your credit report",
+      "2": "If you have a negative registration, it is automatically deleted after 5 years or when debt is paid",
+      "3": "For disputes, email dpodenmark@experian.com",
+      "4": "Include your CPR number and explain the issue",
+      "5": "Experian has 30 days to respond under GDPR"
+    },
+    "dun-bradstreet": {
+      "1": "Visit the D&B data transparency page",
+      "2": "Submit a privacy request form",
+      "3": "Specify what data you want removed or corrected",
+      "4": "D&B will respond within 30 days under GDPR"
+    },
+    "google-right-to-be-forgotten": {
+      "1": "Visit Google's removal request page",
+      "2": "Select 'Remove information you see in Google Search'",
+      "3": "Choose the type of content for removal",
+      "4": "Submit URLs you want delisted from EU search results",
+      "5": "Google reviews each request individually — processing time varies"
+    },
+    "eniro": {
+      "1": "Visit eniro.se",
+      "2": "Log in with BankID to verify your identity",
+      "3": "Request removal of your personal information",
+      "4": "Processing takes 4-10 working days"
+    },
+    "hitta": {
+      "1": "Visit hitta.se",
+      "2": "Log in with BankID to verify your identity",
+      "3": "Navigate to your profile and request removal",
+      "4": "Processing takes 4-10 working days"
+    },
+    "ratsit": {
+      "1": "Visit ratsit.se",
+      "2": "Log in with BankID",
+      "3": "Request removal of your personal data",
+      "4": "Be aware that Ratsit holds a publishing certificate (utgivningsbevis) and may refuse full deletion",
+      "5": "Processing can take up to 30 days"
+    },
+    "mrkoll": {
+      "1": "Visit mrkoll.se",
+      "2": "Log in with BankID",
+      "3": "Request to hide your phone number and address",
+      "4": "Note: MrKoll has utgivningsbevis — they can only hide phone and address, not fully delete your record"
+    },
+    "merinfo": {
+      "1": "Visit merinfo.se/ta-bort-mina-uppgifter",
+      "2": "Log in with BankID",
+      "3": "Submit your removal request",
+      "4": "Processing takes a few working days"
+    },
+    "birthday": {
+      "1": "Visit birthday.se/persontogden",
+      "2": "Use the removal form or email info@birthday.se",
+      "3": "Request deletion of your personal data",
+      "4": "Note: logged-in users may still see cached data temporarily"
+    },
+    "1881": {
+      "1": "Visit 1881.no",
+      "2": "Find your listing in the directory",
+      "3": "Contact 1881 directly to request removal",
+      "4": "Submit a GDPR-based deletion request via their contact form or email"
+    },
+    "gulesider": {
+      "1": "Visit gulesider.no",
+      "2": "Find your listing",
+      "3": "Contact their privacy team to request removal",
+      "4": "Cite GDPR Article 17 (right to erasure) in your request"
+    },
+    "fonecta": {
+      "1": "Email tietosuoja@fonecta.com with your removal request",
+      "2": "Include your full name and phone number",
+      "3": "Cite GDPR Article 17 in your request",
+      "4": "Fonecta has 30 days to respond under GDPR"
+    },
+    "spokeo": {
+      "1": "Go to spokeo.com and search for your name",
+      "2": "Copy the URL of your profile listing",
+      "3": "Visit the opt-out page and paste your profile URL",
+      "4": "Enter your email address",
+      "5": "Check your email and click the confirmation link"
+    },
+    "whitepages": {
+      "1": "Search for your listing on whitepages.com",
+      "2": "Click on your profile to view details",
+      "3": "Copy the URL of your listing page",
+      "4": "Go to the suppression request page",
+      "5": "Enter the listing URL and your phone number",
+      "6": "Complete phone verification via automated call or SMS code"
+    },
+    "beenverified": {
+      "1": "Visit the BeenVerified opt-out search page",
+      "2": "Search for your record by name and state",
+      "3": "Select your listing from the results",
+      "4": "Enter your email address to confirm",
+      "5": "Check your email and click the verification link"
+    },
+    "intelius": {
+      "1": "Go to the PeopleConnect suppression portal",
+      "2": "Create an account or log in with your email",
+      "3": "Search for your records across Intelius properties",
+      "4": "Select the records you want removed",
+      "5": "Confirm suppression request",
+      "6": "Alternatively, email support@mailer.intelius.com or call 1-888-245-1655"
+    },
+    "mylife": {
+      "1": "Visit the MyLife CCPA privacy page",
+      "2": "Search for your profile on mylife.com",
+      "3": "Copy your profile URL",
+      "4": "Submit a deletion request through the CCPA form",
+      "5": "Email privacy@mylife.com with your profile link requesting removal",
+      "6": "A phone call may be required to complete the process"
+    },
+    "peoplefinder": {
+      "1": "Search for your profile on peoplefinders.com",
+      "2": "Copy the URL of your listing",
+      "3": "Go to the opt-out page",
+      "4": "Submit the opt-out form with your listing URL",
+      "5": "Wait 5-7 business days for processing"
+    },
+    "radaris": {
+      "1": "Visit the Radaris privacy control page",
+      "2": "Search for your profile listing",
+      "3": "Click on your profile and select removal option",
+      "4": "Fill out the online removal form",
+      "5": "If the form fails, email customer-service@radaris.com with your profile link",
+      "6": "Follow up if removal is not completed within 7 days"
+    },
+    "truepeoplesearch": {
+      "1": "Go to the TruePeopleSearch removal page",
+      "2": "Enter your name, city, and state",
+      "3": "Enter your email address",
+      "4": "Complete the CAPTCHA verification",
+      "5": "Confirm the removal request",
+      "6": "You may need to complete multiple CAPTCHAs"
+    },
+    "fastpeoplesearch": {
+      "1": "Visit fastpeoplesearch.com",
+      "2": "Scroll to the bottom and find the 'Do Not Sell My Info' link",
+      "3": "Click through to the opt-out form",
+      "4": "Fill in your information and complete the CAPTCHA",
+      "5": "Submit the form"
+    },
+    "ussearch": {
+      "1": "Visit the USSearch Privacy Lock page",
+      "2": "Search for your listing on the site",
+      "3": "Copy your profile URL",
+      "4": "Submit the opt-out form with your details",
+      "5": "Follow the instructions sent to your email"
+    },
+    "pipl": {
+      "1": "Understand that Pipl is an aggregator, not a primary data source",
+      "2": "Visit Pipl's help page for removal information",
+      "3": "Identify the original source sites where your data appears",
+      "4": "Submit removal requests to each source site individually",
+      "5": "After source removals, Pipl will eventually stop displaying your data"
+    },
+    "instantcheckmate": {
+      "1": "Visit the InstantCheckmate opt-out page",
+      "2": "Search for your record by name and state",
+      "3": "Select your listing from the results",
+      "4": "Confirm the removal request",
+      "5": "Check your email for a verification link and click it"
+    },
+    "thatsthem": {
+      "1": "Visit the ThatsThem opt-out page",
+      "2": "Search for your listing on the site",
+      "3": "Select your record from the results",
+      "4": "Fill out the direct opt-out form",
+      "5": "Submit the form"
+    },
+    "acxiom": {
+      "1": "Visit the Acxiom opt-out page",
+      "2": "Fill in your personal information (name, address, email)",
+      "3": "Select the types of data you want removed",
+      "4": "Submit the opt-out form",
+      "5": "Alternatively, call (877) 774-2094 for phone-based removal"
+    },
+    "oracle-datalogix": {
+      "1": "Visit Oracle's privacy choices page",
+      "2": "Scroll to the data suppression section",
+      "3": "Fill out the opt-out form with your personal information",
+      "4": "Submit your request",
+      "5": "Expect processing to take several weeks due to corporate review process"
+    }
+  },
+  "brokerNotes": {
+    "krak": "Krak and De Gule Sider share the same database — removing from one removes from both",
+    "degulesider": "Same owner as Krak — cascade removal via telecom is easiest",
+    "118dk": "Automatically removed when you request a hidden number from your telecom provider",
+    "robinsonlisten": "Official marketing opt-out via CPR registry — companies are legally required to check",
+    "navneadressebeskyttelse": "Government-level name/address protection — must be renewed every year",
+    "experian-rki": "Credit registry — negative entries automatically removed after 5 years or debt settlement",
+    "dun-bradstreet": "Primarily business data — personal data removal possible via GDPR request",
+    "google-right-to-be-forgotten": "EU right to be forgotten — only delists from EU Google results, does not remove from source",
+    "eniro": "BankID required for identity verification",
+    "hitta": "BankID required for identity verification",
+    "ratsit": "Has utgivningsbevis — may legally refuse GDPR deletion requests under Swedish constitutional exemption",
+    "mrkoll": "Has utgivningsbevis — can only hide phone/address, cannot fully delete. GDPR deletion may be refused.",
+    "merinfo": "BankID removal process — relatively straightforward",
+    "birthday": "Email info@birthday.se for fastest processing",
+    "1881": "Standard GDPR-based deletion process",
+    "gulesider": "Standard GDPR-based deletion — contact privacy team directly",
+    "fonecta": "Email tietosuoja@fonecta.com for GDPR-based deletion",
+    "spokeo": "May retain data for paid account holders even after removal",
+    "beenverified": "Also owns PeopleLooker and PeopleSmart",
+    "intelius": "Owns 15+ related people-search sites — opt-out covers all of them",
+    "mylife": "Known for aggressive upselling during opt-out process",
+    "peoplefinder": "May require ID verification for certain requests",
+    "radaris": "May need multiple follow-ups to ensure complete removal",
+    "pipl": "Aggregator — must remove data from original source sites individually",
+    "oracle-datalogix": "Complex corporate process — may take longer than other brokers"
+  },
+  "rightsPage": {
+    "metadata": {
+      "title": "Your GDPR Rights | Breach Guard",
+      "description": "Understand your GDPR rights and copy ready-to-send request templates. Exercise your right to access, erasure, rectification, and more — completely free."
+    },
+    "heading": "Your GDPR Rights",
+    "subheading": "Understand your data protection rights under EU law and use ready-to-send templates to exercise them.",
+    "disclaimer": "These templates are for informational purposes only and do not constitute legal advice. Consult a legal professional for specific situations."
+  },
+  "gdprRights": {
+    "deadline": "{days}-day deadline",
+    "copyTemplate": "Copy template",
+    "copied": "Copied!",
+    "templatePreview": "Template preview",
+    "expandTemplate": "Show full template",
+    "collapseTemplate": "Hide full template",
+    "subjectLabel": "Subject",
+    "placeholderNote": "Fields marked [FILL IN] must be completed with your information before sending.",
+    "rights": {
+      "access": {
+        "title": "Right of Access",
+        "description": "You can request a complete copy of all personal data a company holds about you. They must tell you what data they have, why they process it, who they share it with, and how long they keep it.",
+        "whenToUse": "Use this when you want to know what data a company has collected about you, or after finding your email in a data breach."
+      },
+      "rectification": {
+        "title": "Right to Rectification",
+        "description": "If a company holds inaccurate or incomplete personal data about you, you can request they correct or complete it without undue delay.",
+        "whenToUse": "Use this when your personal information is wrong, outdated, or incomplete — for example, an old address or misspelled name."
+      },
+      "erasure": {
+        "title": "Right to Erasure",
+        "description": "Also known as the 'right to be forgotten'. You can request a company delete all your personal data when it is no longer necessary, you withdraw consent, or it was unlawfully processed.",
+        "whenToUse": "Use this when you want a company to delete your data entirely — for example, removing yourself from a data broker or closing an old account."
+      },
+      "restriction": {
+        "title": "Right to Restriction",
+        "description": "You can request a company temporarily stop processing your data while a dispute is being resolved. Your data is kept but not actively used.",
+        "whenToUse": "Use this when you have challenged the accuracy of your data or objected to processing, and want them to pause while the issue is resolved."
+      },
+      "portability": {
+        "title": "Right to Data Portability",
+        "description": "You can request your personal data in a structured, machine-readable format (like CSV or JSON) and have it transferred directly to another provider.",
+        "whenToUse": "Use this when you want to move your data from one service to another — for example, switching email providers or social media platforms."
+      },
+      "objection": {
+        "title": "Right to Object",
+        "description": "You can object to a company processing your data for direct marketing (absolute right) or on grounds of legitimate interest. For marketing, they must stop immediately.",
+        "whenToUse": "Use this when you receive unwanted marketing emails, or when a company processes your data based on 'legitimate interest' and you disagree."
+      }
+    },
+    "escalation": {
+      "title": "What if they don't respond?",
+      "description": "If a company fails to act on your request, follow these steps to escalate:",
+      "send": {
+        "title": "Send your request",
+        "description": "Send the template via email to the company's DPO or privacy contact.",
+        "dayLabel": "Day 0"
+      },
+      "wait30": {
+        "title": "Wait 30 days",
+        "description": "The company must respond within 30 days (Art. 12(3) GDPR). They can extend by 2 months for complex requests, but must inform you within the first month.",
+        "dayLabel": "30 days"
+      },
+      "reminder": {
+        "title": "Send a reminder",
+        "description": "If no response after 30 days, send a follow-up referencing your original request date and stating you will file a complaint if ignored.",
+        "dayLabel": "Day 30"
+      },
+      "wait14": {
+        "title": "Wait 14 more days",
+        "description": "Give them a final grace period to respond to your reminder.",
+        "dayLabel": "14 days"
+      },
+      "complaint": {
+        "title": "File a complaint with Datatilsynet",
+        "description": "File a complaint via Virk.dk (requires MitID) or contact dt@datatilsynet.dk. You can also complain by mail or phone.",
+        "dayLabel": "Day 44+",
+        "link": "Learn how to file a complaint"
+      }
+    }
+  },
+  "gdprTemplates": {
+    "access": {
+      "subject": "Subject Access Request pursuant to Art. 15 GDPR",
+      "body": "To Whom It May Concern,\n\nI am hereby requesting access pursuant to Article 15 of the GDPR. Please confirm whether or not you are processing personal data concerning me (as specified in Art. 15(1) GDPR).\n\nIn case you are, I request you to provide me with the following information pursuant to Art. 15(1) GDPR:\n1. All personal data concerning me that you have stored;\n2. The purposes of the processing;\n3. The categories of personal data concerned;\n4. The recipients to whom my data has been disclosed;\n5. The envisaged storage period;\n6. Information about the source of the data.\n\nIf you have transferred my personal data to a third country or an international organisation, I request to be informed about the appropriate safeguards according to Art. 46 GDPR.\n\n[FILL IN: Your identification data, e.g. full name, date of birth, address, email address]\n\nPlease respond within one month as required by Art. 12(3) GDPR.\n\nSincerely,\n[FILL IN: Your name]"
+    },
+    "rectification": {
+      "subject": "Request for Rectification pursuant to Art. 16 GDPR",
+      "body": "To Whom It May Concern,\n\nI am hereby requesting rectification of inaccurate personal data concerning me pursuant to Article 16 of the GDPR.\n\nThe following data is inaccurate or incomplete and needs to be corrected:\n[FILL IN: Describe which data is incorrect and what the correct data should be]\n\nI request you to correct this data without undue delay.\n\n[FILL IN: Your identification data, e.g. full name, date of birth, address, email address]\n\nPlease respond within one month as required by Art. 12(3) GDPR.\n\nSincerely,\n[FILL IN: Your name]"
+    },
+    "erasure": {
+      "subject": "Request for Erasure pursuant to Art. 17 GDPR",
+      "body": "To Whom It May Concern,\n\nI am hereby requesting erasure of personal data concerning me pursuant to Article 17 of the GDPR.\n\nI request you to delete all personal data concerning me without undue delay. I believe the deletion is required because one of the following applies (Art. 17(1) GDPR):\n- The data is no longer necessary for the purpose for which it was collected;\n- I withdraw my consent on which the processing was based;\n- I object to the processing and there are no overriding legitimate grounds;\n- The data has been unlawfully processed;\n- The data must be erased for compliance with a legal obligation.\n\n[FILL IN: You may specify additional reasons for your erasure request]\n\nIf you have made the personal data public, you are also obliged to take reasonable steps to inform other controllers processing this data about my erasure request (Art. 17(2) GDPR).\n\n[FILL IN: Your identification data, e.g. full name, date of birth, address, email address]\n\nPlease respond within one month as required by Art. 12(3) GDPR.\n\nSincerely,\n[FILL IN: Your name]"
+    },
+    "restriction": {
+      "subject": "Request for Restriction of Processing pursuant to Art. 18 GDPR",
+      "body": "To Whom It May Concern,\n\nI am hereby requesting restriction of processing of my personal data pursuant to Article 18 of the GDPR.\n\nI request you to restrict the processing of my personal data because one of the following applies (Art. 18(1) GDPR):\n- I contest the accuracy of the personal data — restrict processing until accuracy is verified;\n- The processing is unlawful and I oppose erasure, requesting restriction instead;\n- You no longer need the data but I require it for legal claims;\n- I have objected to processing pursuant to Art. 21(1) — restrict processing until it is verified whether your legitimate grounds override mine.\n\n[FILL IN: Specify which condition applies and provide details]\n\n[FILL IN: Your identification data, e.g. full name, date of birth, address, email address]\n\nPlease respond within one month as required by Art. 12(3) GDPR.\n\nSincerely,\n[FILL IN: Your name]"
+    },
+    "portability": {
+      "subject": "Request for Data Portability pursuant to Art. 20 GDPR",
+      "body": "To Whom It May Concern,\n\nI am hereby requesting data portability pursuant to Article 20 of the GDPR.\n\nI request you to provide me with all personal data concerning me that I have provided to you, in a structured, commonly used and machine-readable format (e.g. CSV, JSON, or XML).\n\n[FILL IN: Optionally, if you want direct transfer] I also request you to transmit this data directly to the following controller:\n[FILL IN: Name and contact details of the receiving controller, if applicable]\n\n[FILL IN: Your identification data, e.g. full name, date of birth, address, email address]\n\nPlease respond within one month as required by Art. 12(3) GDPR.\n\nSincerely,\n[FILL IN: Your name]"
+    },
+    "objection": {
+      "subject": "Objection to Data Processing pursuant to Art. 21 GDPR",
+      "body": "To Whom It May Concern,\n\nI am hereby objecting to the processing of personal data concerning me pursuant to Article 21 of the GDPR.\n\n[FILL IN: Choose one of the following paragraphs and delete the other]\n\nI object to the processing of my data for direct marketing purposes (Art. 21(2) GDPR). You must cease processing my data for this purpose immediately and without exception.\n\nI object to the processing of my data based on Art. 6(1)(e) or (f) GDPR (task in the public interest or legitimate interest). My grounds for objection are:\n[FILL IN: Describe your particular situation and grounds for objection]\n\n[FILL IN: Your identification data, e.g. full name, date of birth, address, email address]\n\nPlease respond within one month as required by Art. 12(3) GDPR.\n\nSincerely,\n[FILL IN: Your name]"
+    }
+  },
+  "gdprWizard": {
+    "metadata": {
+      "title": "GDPR Rights Wizard | Breach Guard",
+      "description": "Find the right GDPR action for your situation with our free interactive guide. Answer a few questions and get a matching request template in 3 steps."
+    },
+    "heading": "Find Your GDPR Right",
+    "subheading": "Answer a few questions and we'll recommend the right template for your situation.",
+    "steps": {
+      "situation": "Situation",
+      "details": "Details",
+      "result": "Result"
+    },
+    "situations": {
+      "breach": {
+        "title": "My data was in a breach",
+        "description": "A company lost or exposed my personal data in a data breach.",
+        "details": "After a data breach, you have the right to know exactly what personal data was compromised. Start by requesting a full copy of your data from the company. You can also check which breaches affected your email on our email check page.",
+        "recommendation": "Request a copy of all your personal data from the breached company. This lets you see exactly what was exposed and take targeted action.",
+        "nextSteps": "1. Send the access request template to the breached company's DPO or privacy contact.\n2. Wait up to 30 days for their response.\n3. Review what data was exposed and consider requesting erasure of unnecessary data.\n4. If they don't respond, follow our escalation guide.",
+        "checkBreachesLink": "Check which breaches affected your email"
+      },
+      "data-removal": {
+        "title": "Remove me from a data broker",
+        "description": "A data broker or website has my personal information and I want it deleted.",
+        "details": "Under GDPR, you have the right to request erasure of your personal data. Data brokers must delete your information when asked, unless they have a legal obligation to keep it. Check our data broker opt-out guide for step-by-step instructions for specific brokers.",
+        "recommendation": "Send an erasure request to the data broker demanding they delete all your personal data. They must comply within 30 days.",
+        "nextSteps": "1. Send the erasure template to the data broker's privacy contact.\n2. If the broker has a self-service opt-out, use that as well.\n3. Wait up to 30 days for confirmation of deletion.\n4. Verify your data has been removed after the deadline.",
+        "brokerGuideLink": "View data broker opt-out guides"
+      },
+      "unwanted-marketing": {
+        "title": "Stop unwanted marketing",
+        "description": "A company keeps sending me marketing emails or messages I don't want.",
+        "details": "Your right to object to direct marketing is absolute under GDPR. The company must stop processing your data for marketing purposes immediately — no exceptions. This applies to email, SMS, phone calls, and postal marketing.",
+        "recommendation": "Send an objection to stop all direct marketing. The company must comply immediately and without exception — this is an absolute right.",
+        "nextSteps": "1. Send the objection template to the company's privacy or marketing department.\n2. They must stop all marketing immediately — there is no 30-day grace period for marketing objections.\n3. If marketing continues after your objection, file a complaint with Datatilsynet."
+      },
+      "wrong-data": {
+        "title": "My data is incorrect",
+        "description": "A company has wrong or outdated information about me that I want corrected.",
+        "details": "If a company holds inaccurate or incomplete data about you, they are obligated to correct it without undue delay. Be specific about what is wrong and what the correct information should be.",
+        "recommendation": "Request rectification of the inaccurate data. Be specific about what is wrong and provide the correct information.",
+        "nextSteps": "1. Send the rectification template specifying what data is incorrect.\n2. Include the correct information so they can update their records.\n3. Wait up to 30 days for confirmation.\n4. If they refuse or don't respond, consider an escalation."
+      },
+      "access-request": {
+        "title": "What data do they have about me?",
+        "description": "I want to know what personal data a company has collected about me.",
+        "details": "A Subject Access Request (SAR) gives you the right to receive a complete copy of all personal data a company holds about you. They must tell you what data they have, why they process it, who they share it with, and how long they keep it. You can also request your data in a portable format.",
+        "recommendation": "Send a Subject Access Request to find out everything a company knows about you. You'll receive a full copy of your data within 30 days.",
+        "nextSteps": "1. Send the access request template to the company's DPO or privacy contact.\n2. Wait up to 30 days — they must respond.\n3. Review the data they send you.\n4. If you want to move your data to another service, use the portability template."
+      }
+    },
+    "backButton": "Back",
+    "nextButton": "Continue",
+    "restartButton": "Start over",
+    "recommendedRight": "Recommended right",
+    "alsoConsider": "You may also want to:",
+    "deadline": "30-day response deadline",
+    "escalationLink": "What if they don't respond?",
+    "complaintLink": "File a complaint",
+    "wizardCta": {
+      "title": "Not sure which right?",
+      "description": "Answer a few questions and we'll recommend the right GDPR template for your situation.",
+      "button": "Find your right"
+    },
+    "breachGuidanceLink": "Exercise your GDPR rights"
+  },
+  "breachActions": {
+    "title": "What data was exposed?",
+    "description": "Select which types of data were affected to see recommended GDPR actions.",
+    "scenarios": {
+      "passwords-exposed": {
+        "label": "Passwords or login credentials",
+        "action": "Request a copy of your data to verify what was stored. Change all affected passwords immediately."
+      },
+      "financial-data": {
+        "label": "Financial or credit card data",
+        "action": "Request your data and ask the company to restrict processing while you assess the impact. Monitor your accounts for unauthorized activity."
+      },
+      "personal-info": {
+        "label": "Personal information (name, address, phone)",
+        "action": "Request a copy of your data and consider requesting full erasure to minimize your exposure."
+      },
+      "email-in-breach": {
+        "label": "Email address",
+        "action": "Request your data and object to any marketing use. Watch for phishing attempts using your email."
+      },
+      "health-data": {
+        "label": "Health or sensitive data",
+        "action": "Request your data and ask for processing to be restricted. Health data has special protection under GDPR Article 9."
+      }
+    },
+    "recommendedTemplates": "Recommended templates:",
+    "viewAllRights": "View all GDPR rights"
+  },
+  "complaintGuide": {
+    "metadata": {
+      "title": "File a Complaint | Breach Guard",
+      "description": "Step-by-step guide to filing a GDPR complaint with the Danish Data Protection Agency. Learn what to prepare, how to file via Virk.dk, and what happens next."
+    },
+    "heading": "File a Complaint with Datatilsynet",
+    "subheading": "If a company has ignored your GDPR request, you can file a complaint with the Danish Data Protection Agency.",
+    "checklist": {
+      "title": "Before you file",
+      "description": "Make sure you've completed these steps before filing a complaint:",
+      "items": {
+        "contactedCompany": "I have contacted the company directly about the issue",
+        "thirtyDaysPassed": "At least 30 days have passed since my request",
+        "evidenceGathered": "I have saved copies of my correspondence (emails, letters)",
+        "originalRequestCopy": "I have a copy of my original GDPR request"
+      }
+    },
+    "steps": {
+      "title": "How to file",
+      "login": {
+        "title": "Log in with MitID",
+        "description": "The complaint form on Virk.dk requires MitID for identification."
+      },
+      "fillForm": {
+        "title": "Complete the complaint form",
+        "description": "Describe your complaint, including which company, what data, and when you first contacted them."
+      },
+      "submit": {
+        "title": "Submit and save your receipt",
+        "description": "After submitting, save your receipt and a copy of the complaint for your records."
+      }
+    },
+    "fileComplaint": "Go to Virk.dk complaint form",
+    "noMitId": {
+      "title": "No MitID?",
+      "description": "You can also file by email, phone, or mail:",
+      "email": "Email: dt@datatilsynet.dk",
+      "phone": "Phone: 33 19 32 00",
+      "mail": "Mail: Carl Jacobsens Vej 35, 2500 Valby"
+    },
+    "crossBorder": {
+      "title": "What about companies outside Denmark?",
+      "description": "You always file with Datatilsynet, even if the company is based in another EU country. Datatilsynet will coordinate with the supervisory authority in the company's country through the GDPR one-stop-shop mechanism. You do not need to identify the correct authority yourself."
+    },
+    "fallbackNote": "If this link doesn't work, visit datatilsynet.dk for the current complaint form.",
+    "complaintCta": {
+      "title": "Company ignoring you?",
+      "description": "If a company hasn't responded to your GDPR request within 30 days, you can escalate.",
+      "button": "File a complaint"
+    },
+    "disclaimer": "This guide is for informational purposes only and does not constitute legal advice."
+  },
+  "privacyPage": {
+    "metadata": {
+      "title": "Privacy Policy | Breach Guard",
+      "description": "Read our privacy policy and see how Breach Guard protects you. No tracking, no cookies, no data storage — and all source code is publicly available."
+    },
+    "heading": "Privacy Policy",
+    "tldr": "In short: We don't track you, we don't store any data, we don't use cookies, and all source code is publicly available.",
+    "sections": {
+      "tracking": {
+        "title": "No tracking",
+        "body": "Breach Guard uses no analytics tools, no tracking pixels, and no fingerprinting. We don't know who you are, where you came from, or what you do on the site. That's by design — we simply don't need that information to help you."
+      },
+      "cookies": {
+        "title": "No cookies",
+        "body": "Breach Guard sets no cookies at all — no tracking cookies, no functional cookies, none. Your language preference is remembered via the URL, not a cookie. That's why we don't need a cookie consent banner either."
+      },
+      "dataHandling": {
+        "title": "How we handle data",
+        "body": "When you check your email, it's sent encrypted to our server, which looks it up via <hibpLink>Have I Been Pwned</hibpLink> and <xonLink>XposedOrNot</xonLink>. When you check a password, it never leaves your browser — we use k-Anonymity, so only a small hash fragment is sent. Nothing is stored on our servers. Try our <emailCheckLink>email check</emailCheckLink> or <passwordCheckLink>password check</passwordCheckLink> to see it in action."
+      },
+      "openSource": {
+        "title": "Open source",
+        "body": "All source code is publicly available on <githubLink>GitHub</githubLink>. You can review exactly what the code does, verify our claims, or suggest improvements. Transparency isn't just a promise — it's something you can check for yourself."
+      }
+    },
+    "lastUpdated": "Last updated: March 2026",
+    "contact": "Questions about our privacy policy? Contact us at <emailLink>privacy@breachguard.dk</emailLink>.",
+    "gdprNote": "Want to learn more about your rights? Read about <gdprRightsLink>your GDPR rights</gdprRightsLink>."
+  },
+  "footer": {
+    "tools": {
+      "heading": "Tools",
+      "password": "Password check",
+      "email": "Email check",
+      "brokers": "Data broker guide",
+      "rights": "GDPR rights"
+    },
+    "guides": {
+      "heading": "Guides",
+      "dataBreach": "What is a data breach?",
+      "removeBrokers": "Remove yourself from data brokers"
+    },
+    "legal": {
+      "heading": "Legal",
+      "privacy": "Privacy policy"
+    },
+    "copyright": "© {year} Breach Guard",
+    "noTracking": "No tracking. No cookies. No accounts."
+  },
+  "guideCallouts": {
+    "dataBreach": {
+      "title": "Learn more about data breaches",
+      "description": "Understand what a data breach is, how it happens, and what you can do to protect yourself."
+    },
+    "removeBrokers": {
+      "title": "Remove your data from data brokers",
+      "description": "Step-by-step guide to removing your personal information from data brokers."
+    },
+    "readMore": "Read the guide"
+  },
+  "guideLayout": {
+    "toc": "Table of contents",
+    "faq": "Frequently asked questions",
+    "lastUpdated": "Last updated: March 2026"
+  },
+  "dataBreachGuide": {
+    "metadata": {
+      "title": "What is a data breach? | Breach Guard",
+      "description": "Learn what a data breach is, how it happens, and what you can do to protect yourself. Check if your email has been exposed."
+    },
+    "heading": "What is a data breach?",
+    "intro": "Every year, millions of people have their personal data exposed in data breaches. From major tech giants to small local businesses — no one is immune. When it happens, your passwords, emails, phone numbers, and other sensitive information can end up in the hands of criminals. In 2024 alone, over 1 billion data records were exposed globally, and the numbers keep rising year after year.\n\nThat may sound alarming, but there is good news: you can take concrete steps to protect yourself and minimize the consequences. This guide explains what data breaches are, how they happen, what types of data are typically exposed, and most importantly — what you can do about it. We walk through real-world examples from recent years and provide you with an actionable checklist of steps you can take right away.\n\nWhether you have already been affected by a data breach, received a notification from a service you use, or simply want to proactively protect yourself, you will find answers and actionable advice here. Let us start with the basics.",
+    "sections": {
+      "whatIs": {
+        "title": "What is a data breach?",
+        "content": "A data breach occurs when unauthorized individuals gain access to personal data stored by a company, organization, or service. It can happen through hackers breaking into a database, but it can also be caused by human error, misconfigured systems, or insider threats. In legal terms, a data breach is any security incident that leads to the accidental or unlawful access to, disclosure of, or loss of personal data.\n\nPersonal data can include everything from names and emails to passwords, social security numbers, credit card details, and health records. When this data is exposed, it can be used for identity theft, fraud, phishing attacks, and other forms of abuse. Exposed data is often sold on the dark web, where criminals can purchase it in bulk packages.\n\nIt is important to understand that a data breach does not necessarily mean that a hacker has personally targeted you. It means that a service you used failed to adequately protect your data. Data breaches can affect any company — regardless of size or industry. Even companies with large security budgets get hit. Under the GDPR, companies in the EU are required to report serious data breaches to authorities within 72 hours, and in many cases, also directly to affected individuals."
+      },
+      "howItHappens": {
+        "title": "How do data breaches happen?",
+        "content": "Data breaches can occur in many different ways. The most common causes include:\n\nHacking and cyber attacks: Criminals use advanced techniques such as SQL injection, brute force attacks, or zero-day exploits to break into company systems. They often automatically scan for known vulnerabilities in software that has not been updated.\n\nPhishing: Employees at companies are tricked into revealing login credentials through fake emails or websites. Just one compromised login can provide access to entire databases of customer data.\n\nMisconfigured databases: Sometimes databases are accidentally made publicly accessible without access controls. Cloud services like Amazon S3 or Elasticsearch have been involved in numerous leaks because default settings are not always secure.\n\nInsider threats: Current or former employees may misuse their access to data — either intentionally or accidentally. An employee sending a database to the wrong recipient is technically also a data breach.\n\nThird-party vulnerabilities: Many companies share data with partners and vendors. If a third-party partner is compromised, your data can also be exposed, even if the primary service itself was not hacked."
+      },
+      "realExamples": {
+        "title": "Notable data breaches",
+        "content": "To understand the scale of the problem, it helps to look at some of the largest data breaches in recent history:\n\nFacebook/Meta (2021): Personal data from 533 million users was leaked, including phone numbers, full names, dates of birth, email addresses, and location data. The data originated from a vulnerability in Facebook's contact import feature, which hackers exploited to scrape massive amounts of user data. The data was made freely available on hacker forums, meaning anyone with access to these forums could download personal information on hundreds of millions of people.\n\nLinkedIn (2021): 700 million user profiles — nearly LinkedIn's entire user base — were put up for sale on the dark web. The data included emails, phone numbers, workplace information, gender, and geographic location. LinkedIn claimed it was technically data scraping rather than a hack, but the result for users was the same: their personal information was exposed and accessible to anyone willing to pay for it.\n\nYahoo (2013-2014): All 3 billion Yahoo accounts were compromised in what is still considered the largest data breach ever. The breach was not publicly disclosed until 2016 and included names, emails, phone numbers, dates of birth, and security questions. This delay illustrates how long it can take before a breach is discovered.\n\nThese examples illustrate an important point: even the largest and most well-resourced tech companies in the world get hit. It is not a question of if a company will be breached, but when. That is why it is crucial to take personal precautions to minimize the consequences when it happens."
+      },
+      "whatIsExposed": {
+        "title": "What data gets exposed?",
+        "content": "The types of data exposed in a breach depend on which service was compromised. Here are the most common types:\n\nEmail addresses: Almost always included and used as the starting point for phishing attacks and further compromise.\n\nPasswords: Often stored in hashed formats, but weak passwords can be cracked quickly. If you reuse passwords, one leaked password can grant access to many of your accounts.\n\nNames and contact information: Full names, phone numbers, physical addresses — data that can be used for identity theft or targeted scams.\n\nFinancial data: Credit card numbers and banking details are less common but do occur. Services that process payments are often subject to stricter security requirements (PCI DSS), but breaches still happen.\n\nIP addresses and device data: Can reveal your approximate geographic location and be used to build profiles.\n\nHealth data: Hospital and healthcare service breaches can expose diagnoses, prescriptions, and insurance information — some of the most sensitive data that exists.\n\nUsage data: Browsing history, search history, app usage, and other behavioral data can reveal private aspects of your life."
+      },
+      "howToCheck": {
+        "title": "How to check if you are affected",
+        "content": "The most effective way to check if your data has been exposed is to use a monitoring service that compares your email against known data breaches. Use our <emailCheckLink>email check</emailCheckLink> to see if your email appears in known data breaches. Our tool uses the k-Anonymity technique, which means your full email is never sent to third parties — only an encrypted fragment is used for the lookup. It is completely free and requires no account.\n\nWhen you run a check, we compare your email against a database of over 14 billion compromised accounts from thousands of known data breaches. The result shows you exactly which breaches your email was found in, when the breach occurred, and what types of data were exposed. This information is crucial for knowing which passwords to change and which accounts to monitor more closely.\n\nIf your email shows up in one or more data breaches, do not panic. This is normal — most active internet users appear in at least one data breach. The important thing is to act quickly: change passwords on affected services, enable two-factor authentication, and monitor your accounts for suspicious activity in the following weeks.\n\nIt is recommended to check your email regularly — new data breaches are discovered continuously, and a check today does not rule out your email appearing tomorrow. Many experts recommend checking at least once every three months."
+      },
+      "howToProtect": {
+        "title": "How to protect yourself",
+        "content": "You cannot prevent companies from being hacked, but you can minimize the consequences for yourself. Here is a practical checklist of the most important precautions:\n\nUse unique passwords for each service: This is the single most important action you can take. If one service is compromised, your other accounts remain secure. Use a password manager like Bitwarden, 1Password, or KeePass to generate and keep track of strong, unique passwords for all your accounts. A good password is at least 12 characters long and contains a mix of letters, numbers, and special characters — but with a password manager, you do not need to memorize them.\n\nEnable two-factor authentication (2FA): Add an extra layer of security to your most important accounts — email, banking, social media, and cloud storage. Prefer an authenticator app (Google Authenticator, Authy, Microsoft Authenticator) over SMS-based 2FA, as SMS can be intercepted via SIM-swapping or eavesdropping. Hardware keys like YubiKey offer the highest level of security.\n\nBe alert to phishing: After a data breach, the number of phishing attempts increases significantly because criminals now have your email and know which services you use. Be extra skeptical of emails that request login credentials or contain urgent links. Always check the sender address and hover over links before clicking. Remember: legitimate companies never ask for your password via email.\n\nMonitor your accounts: Regularly check your bank and email accounts for unauthorized actions. Set up notifications for unusual login attempts. Many banking services offer real-time transaction notifications — turn them on.\n\nMinimize your digital exposure: The fewer services that have your data, the smaller your attack surface. Delete accounts you no longer use, and consider whether you really need to provide your real email to every service. Consider using a separate email address for newsletters and less important signups.\n\nKeep software updated: Many attacks exploit known vulnerabilities in outdated software. Update your operating system, browser, and apps regularly. Enable automatic updates where possible — it is one of the most effective and easily accessible security measures."
+      }
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "Has my data been leaked?",
+          "answer": "You can check by using our free email check. Enter your email address, and we will securely compare it against known data breaches. Most active internet users appear in at least one data breach, so do not be alarmed — what matters is taking action."
+        },
+        {
+          "question": "What should I do if my email is in a data breach?",
+          "answer": "Immediately change the password for the affected service, and enable two-factor authentication if possible. If you used the same password elsewhere, change it there too. Monitor your accounts for suspicious activity in the following weeks."
+        },
+        {
+          "question": "Can I prevent data breaches?",
+          "answer": "You cannot prevent companies from being hacked, but you can minimize the consequences. Use unique passwords for each service, enable two-factor authentication, and limit the amount of personal data you share with online services."
+        },
+        {
+          "question": "What is the difference between a hack and a data breach?",
+          "answer": "A hack is a deliberate attack, while a data breach is any incident where data becomes exposed — it can also be caused by misconfigurations, human error, or insider threats. Not all data breaches involve hacking, but all result in exposed data."
+        },
+        {
+          "question": "How long does it take to discover a data breach?",
+          "answer": "On average, it takes over 200 days to discover a data breach. This means your data could have been exposed for months before anyone notices. That is why regular monitoring and proactive security measures are important."
+        },
+        {
+          "question": "Are free services more vulnerable to data breaches?",
+          "answer": "Not necessarily. Data breaches affect both free and paid services. The key factor is typically the company's size, security practices, and the amount of data they store — not whether the service is free or paid."
+        }
+      ]
+    },
+    "cta": {
+      "label": "Check your email now"
+    }
+  },
+  "brokerRemovalGuide": {
+    "metadata": {
+      "title": "Remove yourself from data brokers | Breach Guard",
+      "description": "Learn how to remove your personal information from data brokers. Step-by-step guide with GDPR rights and opt-out links."
+    },
+    "heading": "Remove yourself from data brokers",
+    "intro": "Data brokers are companies that collect, organize, and sell personal information about you. They often operate in the shadows, and many people do not even realize their data is being freely traded. Your full name, email, phone number, address, and even your interests and purchase history may be available to anyone willing to pay.\n\nThe good news is that you have rights. Under the GDPR (the European General Data Protection Regulation), you have the right to have your data deleted, and data brokers are legally obligated to comply with your request. This guide gives you a complete overview of what data brokers are, why you should remove your data, and exactly how to do it — step by step.\n\nWhether you want to minimize your digital exposure, protect yourself from identity theft, or simply exercise your rights as an EU citizen, you will find all the tools and information you need here.",
+    "sections": {
+      "whatAreBrokers": {
+        "title": "What are data brokers?",
+        "content": "Data brokers are companies that specialize in collecting, aggregating, and reselling personal information. They source data from a wide range of places: public records, social media, online behavior via cookies and tracking pixels, loyalty programs, app data, and direct data partnerships with other companies.\n\nThere are several types of data brokers. People search services like Spokeo, WhitePages, and BeenVerified make it easy to find people's addresses and phone numbers. Marketing data brokers like Acxiom and Oracle Data Cloud build detailed profiles about consumer interests, purchasing habits, and lifestyle, which they sell to advertisers. Credit bureaus like Experian and TransUnion collect financial data for credit scoring.\n\nThe global data broker industry is estimated to generate over 300 billion dollars annually. Your data is literally a commodity — and in most cases, you never gave your informed consent for it to be collected and resold. Data brokers operate in a legal gray zone, exploiting the fact that many people do not know their data is being traded."
+      },
+      "whyRemove": {
+        "title": "Why should you remove your data?",
+        "content": "Having your personal information spread across many data brokers creates a wide range of risks. The more places your data exists, the larger your attack surface. Criminals can use information from data brokers to conduct targeted phishing attacks, identity theft, social engineering, or even physical stalking. Spam and unwanted marketing are also direct consequences — have you ever wondered how a company you have never heard of got your email?\n\nYour data is used to build detailed profiles that can affect everything from the prices you see online to the job offers you receive. This invisible profiling happens without your knowledge and without your control. If your data has already been leaked in a data breach, it is even more important to remove it from data brokers, as the combination of leaked and purchased data gives criminals a more complete picture. <dataBreachGuideLink>Learn more about data breaches</dataBreachGuideLink> and how they affect you.\n\nEven if you have nothing to hide, it is about control over your own information. Privacy is a fundamental right, and removing your data from data brokers is a concrete action you can take to protect it."
+      },
+      "yourRights": {
+        "title": "Your rights under the GDPR",
+        "content": "As an EU/EEA citizen, you have strong legal rights when it comes to your personal data. The GDPR gives you several relevant rights regarding data brokers:\n\nRight to erasure (Article 17): You can demand that a company deletes all personal data they hold about you. Data brokers must comply with this request within 30 days, unless they have a lawful basis for retaining the data (e.g., legal obligations or public interest).\n\nRight to object (Article 21): You can object to your data being used for direct marketing or profiling. Once you object, the company must immediately cease the processing in question.\n\nRight of access (Article 15): You can request a copy of all personal data a company holds about you, along with information about where they obtained the data and who they have shared it with.\n\nRight to restriction (Article 18): You can demand that a company restricts the use of your data while a dispute about accuracy or lawfulness is being resolved.\n\nUse our <wizardLink>GDPR wizard</wizardLink> to generate a professional erasure request that contains all the legal references the data broker needs."
+      },
+      "stepByStep": {
+        "title": "Step-by-step removal",
+        "content": "Here is a practical procedure for removing your data from data brokers. The process requires some patience, but each step is straightforward and can be done from your computer at home.\n\nStep 1 — Identify which data brokers have your data: Start by searching your own name, email, and phone number on Google. Note all results from people search services and data broker sites. See our <brokerGuideLink>data broker guide</brokerGuideLink> for a complete list of known data brokers with direct links to their opt-out pages. Create a list of all brokers where you find your information — this becomes your working list for the next steps.\n\nStep 2 — Start with the easy ones: Many data brokers have automated opt-out forms where you can request deletion with just a few clicks. Start with these for quick results and a sense of progress. Typically, it takes 5-10 minutes per broker with an automated form.\n\nStep 3 — Send formal GDPR requests: For data brokers that do not have an easy opt-out option, send a formal erasure request via email. Reference GDPR Article 17 and demand deletion of all personal data. Include your full name and the email address associated with your profile so they can locate your data. Our GDPR wizard can generate this email for you with all the necessary legal references.\n\nStep 4 — Follow up after 30 days: The GDPR requires a response within 30 days. Mark the date in your calendar for each request you send. If you do not hear back from the data broker, send a reminder referencing your original request and mention that you are considering filing a complaint with the Data Protection Authority. This threat alone is often enough to expedite the process.\n\nStep 5 — File a complaint if ignored: If the data broker ignores your request after both the initial contact and the reminder, you can file a complaint with your national Data Protection Authority. They have the power to impose fines of up to 4% of the company's global revenue and demand compliance. The complaint is free and can be filed online."
+      },
+      "afterRemoval": {
+        "title": "After removal",
+        "content": "It is important to understand that removal from data brokers is not a permanent solution. Data brokers continuously collect new data from public records, partnerships, and web scraping, and your information may reappear after some time — typically within 3-6 months. That is why it is recommended to repeat the process regularly, just as you regularly update your passwords.\n\nSet a reminder in your calendar to run through the process again in 6-12 months. Over time, it gets significantly faster because you know the procedure, have the contact information ready, and know exactly which brokers require extra attention. Many data brokers remember your opt-out request and will not re-collect your data, but new data brokers may appear as the industry grows.\n\nContinuously monitor your online presence: Regularly search your own name and email on Google to see if new sites appear with your information. Use quotation marks around your name for more precise results. The sooner you discover a new source, the sooner you can take action.\n\nKeep copies of your requests and any responses: This documentation is important if you later need to file a complaint with the Data Protection Authority. An organized system with dates, contact information, and status makes the entire process much more manageable."
+      },
+      "prevention": {
+        "title": "Prevent future data collection",
+        "content": "Beyond removing existing data, you can take proactive steps to minimize how much new data is collected about you in the future. Prevention is far more effective than cleanup — the less data that is collected in the first place, the less you need to remove later.\n\nUse privacy-friendly browser extensions: Tools like uBlock Origin, Privacy Badger, and DuckDuckGo Privacy Essentials block trackers and cookies used to collect data about your browsing behavior. Consider also using a privacy-focused browser like Firefox or Brave as your primary browser, as they have built-in protection mechanisms against tracking.\n\nLimit sharing on social media: Review your privacy settings on Facebook, LinkedIn, Instagram, and other platforms. Make your profile as private as possible, and consider what you share publicly. Remember that even information you share with \"friends\" can end up with data brokers through third-party apps and data partnerships. Remove apps with access to your profile that you no longer use.\n\nOpt out of marketing consent: When creating accounts or signing up for services, always opt out of marketing, data sharing with third parties, and profiling. Under the GDPR, these fields should be unchecked by default, but many companies try to get you to opt in with dark patterns and confusing language. Always read the consent text carefully.\n\nUse a separate email for signups: Create a dedicated email address for newsletters, online shops, and less important accounts. Keep your primary email private and use it only for important services like banking and work. Some services like SimpleLogin or Apple's \"Hide My Email\" can generate unique email aliases for each registration.\n\nCheck privacy policies: Before sharing personal information with a new service, quickly skim their privacy policy to see if they share data with third parties. If the policy is unclear or too broad, consider an alternative. Remember: if the product is free, you are often the product."
+      }
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "How long does it take to get removed?",
+          "answer": "It varies depending on the data broker. Under the GDPR, they are required to respond within 30 days. Some data brokers have automated opt-out forms that process requests within a few days, while others require manual processes that can take up to the full 30-day deadline."
+        },
+        {
+          "question": "Is it free to get removed?",
+          "answer": "Yes, under the GDPR, you have the right to free erasure of your personal data. A data broker cannot charge you for complying with your request. If a data broker demands payment, that is itself a GDPR violation that you can report to the Data Protection Authority."
+        },
+        {
+          "question": "Can data brokers refuse to delete my data?",
+          "answer": "In certain cases, a data broker can refuse if they have a lawful basis — such as legal obligations, public interest, or exercise of freedom of expression. However, for the vast majority of commercial data brokering cases, they have no valid reason to retain your data and must delete it upon request."
+        },
+        {
+          "question": "What if a data broker does not respond?",
+          "answer": "If you do not receive a response within 30 days, send a reminder referencing your original request. Mention that you are considering filing a complaint with the Data Protection Authority. If there is still no response, you can file a formal complaint — they have the power to impose fines of up to 4% of the company's global revenue."
+        },
+        {
+          "question": "Do I need to remove myself from all data brokers?",
+          "answer": "It is a good idea to start with the most impactful ones: people search services (that display your name and address publicly) and marketing data brokers (that sell your profiles to advertisers). You do not need to remove yourself from all of them at once — prioritize and work through the list over time."
+        },
+        {
+          "question": "Can I automate the removal process?",
+          "answer": "There are paid services like Incogni and DeleteMe that automate the process, but it is entirely possible to do it yourself with GDPR tools. Our GDPR wizard generates an erasure request you can send directly, and our data broker guide contains opt-out links to the most common data brokers."
+        }
+      ]
+    },
+    "cta": {
+      "label": "Open the data broker guide"
+    }
+  },
+  "ogImage": {
+    "home": {
+      "title": "Has your data been leaked?",
+      "description": "Check for free if your passwords and emails have been exposed in known data breaches."
+    },
+    "email": {
+      "title": "Check your email for breaches",
+      "description": "Find out if your email address has been compromised in known data breaches."
+    },
+    "password": {
+      "title": "Check your password",
+      "description": "See if your password has appeared in known data breaches. Private and secure."
+    },
+    "brokers": {
+      "title": "Remove yourself from data brokers",
+      "description": "Step-by-step guide to deleting your personal data from data brokers."
+    },
+    "rights": {
+      "title": "Your GDPR rights",
+      "description": "Understand your rights and send ready-to-use GDPR requests."
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "description": "No tracking, no accounts, no cookies. See how we protect you."
+    },
+    "guideDataBreach": {
+      "title": "What is a data breach?",
+      "description": "Everything you need to know about data breaches and how to protect yourself."
+    },
+    "guideBrokerRemoval": {
+      "title": "Remove yourself from data brokers",
+      "description": "Complete guide to removing your personal information from data brokers."
+    }
+  }
+}

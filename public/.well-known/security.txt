@@ -1,0 +1,8 @@
+# Security policy for Breach Guard
+# https://securitytxt.org/
+
+Contact: https://github.com/allcounter/breach-guard/security/advisories/new
+Expires: 2027-03-23T00:00:00.000Z
+Preferred-Languages: en, da
+Canonical: https://breach-guard-theta.vercel.app/.well-known/security.txt
+Policy: https://github.com/allcounter/breach-guard/blob/main/SECURITY.md

@@ -1,0 +1,954 @@
+{
+  "layout": {
+    "metadata": {
+      "title": "Breach Guard",
+      "description": "Tjek om dine adgangskoder og emails er blevet eksponeret i datalæk. Gratis og privat."
+    }
+  },
+  "common": {
+    "appName": "Breach Guard",
+    "navigation": {
+      "password": "Adgangskode",
+      "email": "Email",
+      "brokers": "Datamæglere",
+      "rights": "Rettigheder"
+    },
+    "theme": {
+      "switchTo": "Skift til {theme} tema"
+    },
+    "language": {
+      "switchTo": "Skift til {language}",
+      "da": "Dansk",
+      "en": "English"
+    },
+    "attribution": {
+      "hibp": "Lækagedata fra <provider>Have I Been Pwned</provider>",
+      "xon": "Lækagedata fra <provider>XposedOrNot</provider>"
+    },
+    "error": {
+      "title": "Noget gik galt",
+      "description": "Der opstod en uventet fejl. Prøv venligst igen.",
+      "retry": "Prøv igen"
+    }
+  },
+  "home": {
+    "metadata": {
+      "title": "Er dine data lækket? Find ud af det nu | Breach Guard",
+      "description": "Tjek gratis om dine adgangskoder og e-mails er lækket i kendte databrud. Ingen konto nødvendig — helt privat og på dansk."
+    },
+    "hero": {
+      "title": "Er dine data blevet lækket?",
+      "description": "Tjek dine adgangskoder og emails mod kendte datalæk. Gratis, privat, ingen konto — dine data forbliver under din kontrol."
+    },
+    "cards": {
+      "password": {
+        "title": "Adgangskodetjek",
+        "description": "Er din adgangskode sikker? Tjek den mod kendte datalæk — alt sker i din browser."
+      },
+      "email": {
+        "title": "Emailtjek",
+        "description": "Find ud af om din email er eksponeret i kendte datalæk, og få konkrete næste skridt."
+      },
+      "brokers": {
+        "title": "Datamægler-framelding",
+        "description": "Fjern dine personlige data fra datamæglere med trin-for-trin guides."
+      },
+      "rights": {
+        "title": "GDPR-rettigheder",
+        "description": "Kend dine rettigheder og send GDPR-anmodninger med klar-til-brug skabeloner."
+      }
+    },
+    "trust": "Dine data tjekkes mod kendte offentlige datalæk — intet gemmes, og der er ingen dark web-påstande. <privacyLink>Læs privatlivspolitikken</privacyLink>.",
+    "badges": {
+      "noTracking": "Ingen tracking",
+      "noAccounts": "Ingen konti",
+      "clientSide": "Client-side analyse",
+      "openSource": "Open source"
+    },
+    "counters": {
+      "brokers": "Datamæglere",
+      "breaches": "Brud tracket",
+      "templates": "GDPR-skabeloner",
+      "personalChecks": "Dine tjek"
+    }
+  },
+  "emailPage": {
+    "metadata": {
+      "title": "Email-lækketjek | Breach Guard",
+      "description": "Tjek om din email er blevet eksponeret i kendte datalæk. Se hvilke tjenester der var berørt og få konkrete næste skridt til at beskytte dine konti."
+    },
+    "heading": "Er din email lækket?",
+    "subheading": "Indtast din email for at se om den optræder i kendte datalæk. Den sendes krypteret og gemmes ikke."
+  },
+  "passwordPage": {
+    "metadata": {
+      "title": "Adgangskodetjek | Breach Guard",
+      "description": "Tjek gratis om din adgangskode er dukket op i kendte datalæk. Din adgangskode forlader aldrig din browser — vi bruger sikker k-Anonymity-teknologi."
+    },
+    "heading": "Adgangskodetjek",
+    "subheading": "Din adgangskode forlader aldrig din browser",
+    "explanation": "Vi tjekker datalæk med k-Anonymity — kun et lille hash-fragment sendes, aldrig din rigtige adgangskode."
+  },
+  "brokersPage": {
+    "metadata": {
+      "title": "Datamægler-frameldingsguide | Breach Guard",
+      "description": "Fjern dine personlige data fra datamæglere med vores gratis trin-for-trin guides på dansk. Dæk danske, svenske, norske og finske mæglere."
+    },
+    "heading": "Datamægler-frameldingsguide",
+    "subheading": "Fjern dine personlige oplysninger fra datamæglersider. Hver post indeholder trin-for-trin instruktioner du kan følge med det samme.",
+    "warning": "Bekræft altid instruktionerne på mæglerens hjemmeside. Frameldingsprocesser ændrer sig ofte og skal muligvis gentages jævnligt."
+  },
+  "emailForm": {
+    "placeholder": "Indtast din email",
+    "submit": "Tjek",
+    "checking": "Tjekker...",
+    "errors": {
+      "network": "Kunne ikke oprette forbindelse. Tjek din internetforbindelse og prøv igen.",
+      "rateLimit": "Vi har nået vores daglige grænse. Prøv igen om et par timer.",
+      "serviceUnavailable": "Tjenesten er midlertidigt utilgængelig. Prøv igen om lidt."
+    }
+  },
+  "passwordForm": {
+    "placeholder": "Indtast en adgangskode for at tjekke",
+    "showPassword": "Vis adgangskode",
+    "hidePassword": "Skjul adgangskode",
+    "ariaLabel": "Adgangskode at tjekke",
+    "loadingStrength": "Indlæser styrketjek...",
+    "checkBreaches": "Tjek datalæk",
+    "checking": "Tjekker...",
+    "errors": {
+      "network": "Kan ikke tjekke datalæk lige nu. Prøv igen om et øjeblik."
+    }
+  },
+  "passwordStrength": {
+    "strength": "Styrke",
+    "scores": {
+      "0": "Meget svag",
+      "1": "Svag",
+      "2": "Rimelig",
+      "3": "Stærk",
+      "4": "Meget stærk"
+    },
+    "crackTime": "Estimeret cracktid: {time}",
+    "checkingBreaches": "Tjekker datalæk...",
+    "found": "Fundet i {count, plural, one {# datalæk} other {# datalæk}}",
+    "foundAdvice": "Skift denne adgangskode med det samme. Brug den ikke til nogen konti.",
+    "notFound": "Ikke fundet i kendte datalæk",
+    "notFoundAdvice": "Denne adgangskode er ikke dukket op i nogen kendte datalæk."
+  },
+  "breachResults": {
+    "noBreaches": "Godt nyt! Din email blev ikke fundet i nogen kendte datalæk.",
+    "noBreachesAdvice": "Bliv ved med at bruge stærke, unikke adgangskoder og aktivér 2FA hvor det er muligt.",
+    "summary": "Din email blev fundet i {count, plural, one {# kendt datalæk} other {# kendte datalæk}}.",
+    "severity": {
+      "high": "Høj",
+      "medium": "Middel",
+      "low": "Lav",
+      "unknown": "Ukendt"
+    },
+    "colService": "Tjeneste",
+    "colDate": "Dato",
+    "colAccounts": "Berørte konti",
+    "unknownGroup": "{count, plural, one {# datalæk uden detaljeret info} other {# datalæk uden detaljeret info}}"
+  },
+  "breachGuidance": {
+    "title": "Hvad skal jeg gøre nu?",
+    "steps": {
+      "changePasswords": "Skift adgangskoder på de berørte tjenester",
+      "enable2fa": "Aktivér to-faktor-godkendelse (2FA) overalt",
+      "checkReuse": "Tjek om du genbruger adgangskoder på tværs af tjenester",
+      "useManager": "Overvej at bruge en adgangskodeadministrator til unikke adgangskoder"
+    }
+  },
+  "brokerGuide": {
+    "searchPlaceholder": "Søg mæglere...",
+    "filterAll": "Alle",
+    "difficulty": {
+      "easy": "Nem",
+      "medium": "Middel",
+      "hard": "Svær"
+    },
+    "resultCount": "{count, plural, one {# mægler} other {# mæglere}}",
+    "noResults": "Ingen mæglere matcher din søgning.",
+    "goToOptOut": "Gå til frameldingsside",
+    "note": "Bemærk:",
+    "lastVerified": "Sidst bekræftet:",
+    "region": {
+      "all": "Alle regioner",
+      "denmark": "Danmark",
+      "sweden": "Sverige",
+      "norway": "Norge",
+      "finland": "Finland",
+      "international": "International"
+    },
+    "category": {
+      "directory": "Telefonbøger og registre",
+      "marketing": "Marketing og reklame",
+      "credit": "Kredit og økonomi",
+      "government": "Offentlige registre",
+      "search-engine": "Søgemaskiner"
+    },
+    "quickWin": {
+      "title": "Hurtig gevinst for danske brugere",
+      "description": "Kontakt dit teleselskab (TDC, Telia, Telenor m.fl.) og bed om et 'hemmeligt nummer'. Det fjerner dig automatisk fra Krak, De Gule Sider og 118.dk — 3 mæglere med ét opkald."
+    },
+    "requiresId": "Kræver NemID/MitID",
+    "dataTypes": "Indsamlede data",
+    "dataTypeLabels": {
+      "name": "Navn",
+      "address": "Adresse",
+      "phone": "Telefon",
+      "income": "Indkomst",
+      "credit-history": "Kredithistorik",
+      "business-data": "Virksomhedsdata",
+      "search-results": "Søgeresultater",
+      "birthday": "Fødselsdag"
+    },
+    "swedenDisclaimer": "Nogle svenske mæglere har et udgivningsbevis (utgivningsbevis), der kan fritage dem fra GDPR-sletningsanmodninger. Fjernelse er ikke altid garanteret.",
+    "regionFilter": "Region"
+  },
+  "breachTimeline": {
+    "summary": "{count} {count, plural, one {datalæk} other {datalæk}} — ældste {minYear}, nyeste {maxYear}",
+    "ariaLabel": "Datalæktidslinje der viser {count} datalæk fra {minYear} til {maxYear}",
+    "title": "Datalæktidslinje: {count} datalæk fra {minYear} til {maxYear}",
+    "undated": "{count} {count, plural, one {datalæk} other {datalæk}} ikke vist — dato ukendt",
+    "dismiss": "Luk",
+    "closeDetail": "Luk detaljer"
+  },
+  "validation": {
+    "emailRequired": "Email er påkrævet",
+    "emailInvalid": "Indtast venligst en gyldig emailadresse",
+    "emailTooLong": "Emailadressen er for lang"
+  },
+  "format": {
+    "accounts": "konti",
+    "millionAccounts": "million konti",
+    "billionAccounts": "milliarder konti",
+    "kAccounts": "k konti"
+  },
+  "brokerSteps": {
+    "krak": {
+      "1": "Kontakt dit teleselskab (TDC, Telia, Telenor m.fl.) og bed om at få dit nummer sat som hemmeligt",
+      "2": "Alternativt, gå til opdater.krak.dk og log ind med MitID",
+      "3": "Vælg 'Fjern mine oplysninger' og bekræft",
+      "4": "Ændringer tager op til 2 uger at sprede sig til Krak, De Gule Sider og 118.dk"
+    },
+    "degulesider": {
+      "1": "Kontakt dit teleselskab og bed om et hemmeligt nummer",
+      "2": "Eller besøg degulesider.dk/hjaelp/personsoeg og følg instruktionerne",
+      "3": "Deler database med Krak — fjernelse fra den ene dækker begge",
+      "4": "Tager op til 2 uger før ændringer vises"
+    },
+    "118dk": {
+      "1": "Kontakt dit teleselskab og bed om at få dit nummer skjult",
+      "2": "Opdatering inden for 1 arbejdsdag efter dit teleselskab behandler anmodningen",
+      "3": "Ingen direkte frameldingsformular — fjernelse sker gennem dit teleselskab"
+    },
+    "robinsonlisten": {
+      "1": "Log ind på borger.dk med MitID",
+      "2": "Naviger til CPR-selvbetjening",
+      "3": "Tilmeld dig Robinsonlisten (framelding af markedsføring)",
+      "4": "Det tager op til 3 måneder før alle virksomheder stopper markedsføring"
+    },
+    "navneadressebeskyttelse": {
+      "1": "Log ind på borger.dk med MitID",
+      "2": "Naviger til 'Navne- og adressebeskyttelse'",
+      "3": "Ansøg om navne- og adressebeskyttelse",
+      "4": "Beskyttelsen varer 1 år og skal fornyes årligt"
+    },
+    "experian-rki": {
+      "1": "Besøg dininfo.dk for at tjekke din kreditrapport",
+      "2": "Har du en negativ registrering, slettes den automatisk efter 5 år eller når gælden er betalt",
+      "3": "Ved uenigheder, send email til dpodenmark@experian.com",
+      "4": "Inkludér dit CPR-nummer og forklar problemet",
+      "5": "Experian har 30 dage til at svare under GDPR"
+    },
+    "dun-bradstreet": {
+      "1": "Besøg D&B's side for datagennemsigtighed",
+      "2": "Indsend en privatlivsanmodning",
+      "3": "Angiv hvilke data du vil have fjernet eller rettet",
+      "4": "D&B svarer inden for 30 dage under GDPR"
+    },
+    "google-right-to-be-forgotten": {
+      "1": "Besøg Googles side for fjernelsesanmodninger",
+      "2": "Vælg 'Fjern information du ser i Google Søgning'",
+      "3": "Vælg typen af indhold der skal fjernes",
+      "4": "Indsend URL'er du vil have fjernet fra EU-søgeresultater",
+      "5": "Google gennemgår hver anmodning individuelt — behandlingstiden varierer"
+    },
+    "eniro": {
+      "1": "Besøg eniro.se",
+      "2": "Log ind med BankID for at bekræfte din identitet",
+      "3": "Anmod om fjernelse af dine personlige oplysninger",
+      "4": "Behandling tager 4-10 arbejdsdage"
+    },
+    "hitta": {
+      "1": "Besøg hitta.se",
+      "2": "Log ind med BankID for at bekræfte din identitet",
+      "3": "Naviger til din profil og anmod om fjernelse",
+      "4": "Behandling tager 4-10 arbejdsdage"
+    },
+    "ratsit": {
+      "1": "Besøg ratsit.se",
+      "2": "Log ind med BankID",
+      "3": "Anmod om fjernelse af dine personlige data",
+      "4": "Vær opmærksom på at Ratsit har et udgivningsbevis (utgivningsbevis) og kan afvise fuld sletning",
+      "5": "Behandling kan tage op til 30 dage"
+    },
+    "mrkoll": {
+      "1": "Besøg mrkoll.se",
+      "2": "Log ind med BankID",
+      "3": "Anmod om at skjule dit telefonnummer og din adresse",
+      "4": "Bemærk: MrKoll har udgivningsbevis — de kan kun skjule telefon og adresse, ikke fuldt slette din post"
+    },
+    "merinfo": {
+      "1": "Besøg merinfo.se/ta-bort-mina-uppgifter",
+      "2": "Log ind med BankID",
+      "3": "Indsend din fjernelsesanmodning",
+      "4": "Behandling tager nogle få arbejdsdage"
+    },
+    "birthday": {
+      "1": "Besøg birthday.se/persontogden",
+      "2": "Brug fjernelsesformularen eller send email til info@birthday.se",
+      "3": "Anmod om sletning af dine personlige data",
+      "4": "Bemærk: indloggede brugere kan stadig se cachedata midlertidigt"
+    },
+    "1881": {
+      "1": "Besøg 1881.no",
+      "2": "Find din post i telefonbogen",
+      "3": "Kontakt 1881 direkte for at anmode om fjernelse",
+      "4": "Indsend en GDPR-baseret sletningsanmodning via deres kontaktformular eller email"
+    },
+    "gulesider": {
+      "1": "Besøg gulesider.no",
+      "2": "Find din post",
+      "3": "Kontakt deres privatlivsteam for at anmode om fjernelse",
+      "4": "Henvis til GDPR artikel 17 (ret til sletning) i din anmodning"
+    },
+    "fonecta": {
+      "1": "Send email til tietosuoja@fonecta.com med din fjernelsesanmodning",
+      "2": "Inkludér dit fulde navn og telefonnummer",
+      "3": "Henvis til GDPR artikel 17 i din anmodning",
+      "4": "Fonecta har 30 dage til at svare under GDPR"
+    },
+    "spokeo": {
+      "1": "Gå til spokeo.com og søg efter dit navn",
+      "2": "Kopiér URL'en til din profilside",
+      "3": "Besøg frameldingssiden og indsæt din profil-URL",
+      "4": "Indtast din emailadresse",
+      "5": "Tjek din email og klik på bekræftelseslinket"
+    },
+    "whitepages": {
+      "1": "Søg efter din post på whitepages.com",
+      "2": "Klik på din profil for at se detaljer",
+      "3": "Kopiér URL'en til din profilside",
+      "4": "Gå til siden for undertrykkelsesanmodninger",
+      "5": "Indtast profil-URL'en og dit telefonnummer",
+      "6": "Gennemfør telefonverifikation via automatisk opkald eller SMS-kode"
+    },
+    "beenverified": {
+      "1": "Besøg BeenVerifieds frameldingssøgeside",
+      "2": "Søg efter din post med navn og stat",
+      "3": "Vælg din post fra resultaterne",
+      "4": "Indtast din emailadresse for at bekræfte",
+      "5": "Tjek din email og klik på verifikationslinket"
+    },
+    "intelius": {
+      "1": "Gå til PeopleConnects undertrykkelsesportal",
+      "2": "Opret en konto eller log ind med din email",
+      "3": "Søg efter dine poster på tværs af Intelius' sider",
+      "4": "Vælg de poster du vil have fjernet",
+      "5": "Bekræft undertrykkelsesanmodningen",
+      "6": "Alternativt, send email til support@mailer.intelius.com eller ring 1-888-245-1655"
+    },
+    "mylife": {
+      "1": "Besøg MyLifes CCPA-privatlivsside",
+      "2": "Søg efter din profil på mylife.com",
+      "3": "Kopiér din profil-URL",
+      "4": "Indsend en sletningsanmodning via CCPA-formularen",
+      "5": "Send email til privacy@mylife.com med dit profillink og anmod om fjernelse",
+      "6": "Et telefonopkald kan være nødvendigt for at fuldføre processen"
+    },
+    "peoplefinder": {
+      "1": "Søg efter din profil på peoplefinders.com",
+      "2": "Kopiér URL'en til din post",
+      "3": "Gå til frameldingssiden",
+      "4": "Indsend frameldingsformularen med din post-URL",
+      "5": "Vent 5-7 arbejdsdage på behandling"
+    },
+    "radaris": {
+      "1": "Besøg Radaris' privatlivskontrolside",
+      "2": "Søg efter din profilpost",
+      "3": "Klik på din profil og vælg fjernelsesmuligheden",
+      "4": "Udfyld online-fjernelsesformularen",
+      "5": "Hvis formularen fejler, send email til customer-service@radaris.com med dit profillink",
+      "6": "Følg op hvis fjernelsen ikke er gennemført inden for 7 dage"
+    },
+    "truepeoplesearch": {
+      "1": "Gå til TruePeopleSearchs fjernelsesside",
+      "2": "Indtast dit navn, by og stat",
+      "3": "Indtast din emailadresse",
+      "4": "Gennemfør CAPTCHA-verifikationen",
+      "5": "Bekræft fjernelsesanmodningen",
+      "6": "Du skal muligvis gennemføre flere CAPTCHA'er"
+    },
+    "fastpeoplesearch": {
+      "1": "Besøg fastpeoplesearch.com",
+      "2": "Scroll ned til bunden og find linket 'Do Not Sell My Info'",
+      "3": "Klik videre til frameldingsformularen",
+      "4": "Udfyld dine oplysninger og gennemfør CAPTCHA'en",
+      "5": "Indsend formularen"
+    },
+    "ussearch": {
+      "1": "Besøg USSearchs Privacy Lock-side",
+      "2": "Søg efter din post på siden",
+      "3": "Kopiér din profil-URL",
+      "4": "Indsend frameldingsformularen med dine oplysninger",
+      "5": "Følg instruktionerne sendt til din email"
+    },
+    "pipl": {
+      "1": "Forstå at Pipl er en aggregator, ikke en primær datakilde",
+      "2": "Besøg Pipls hjælpeside for information om fjernelse",
+      "3": "Identificér de oprindelige kildesider hvor dine data optræder",
+      "4": "Indsend fjernelsesanmodninger til hver kildeside individuelt",
+      "5": "Efter fjernelse fra kilderne vil Pipl med tiden stoppe med at vise dine data"
+    },
+    "instantcheckmate": {
+      "1": "Besøg InstantCheckmates frameldingsside",
+      "2": "Søg efter din post med navn og stat",
+      "3": "Vælg din post fra resultaterne",
+      "4": "Bekræft fjernelsesanmodningen",
+      "5": "Tjek din email for et verifikationslink og klik på det"
+    },
+    "thatsthem": {
+      "1": "Besøg ThatsThems frameldingsside",
+      "2": "Søg efter din post på siden",
+      "3": "Vælg din post fra resultaterne",
+      "4": "Udfyld den direkte frameldingsformular",
+      "5": "Indsend formularen"
+    },
+    "acxiom": {
+      "1": "Besøg Acxioms frameldingsside",
+      "2": "Udfyld dine personlige oplysninger (navn, adresse, email)",
+      "3": "Vælg de typer data du vil have fjernet",
+      "4": "Indsend frameldingsformularen",
+      "5": "Alternativt, ring (877) 774-2094 for telefonbaseret fjernelse"
+    },
+    "oracle-datalogix": {
+      "1": "Besøg Oracles side for privatlivsvalg",
+      "2": "Scroll til sektionen for dataundertrykkelse",
+      "3": "Udfyld frameldingsformularen med dine personlige oplysninger",
+      "4": "Indsend din anmodning",
+      "5": "Forvent at behandlingen tager flere uger grundet virksomhedens gennemgangsproces"
+    }
+  },
+  "brokerNotes": {
+    "krak": "Krak og De Gule Sider deler samme database — fjernelse fra den ene fjerner fra begge",
+    "degulesider": "Samme ejer som Krak — kaskadefjernelse via teleselskab er nemmest",
+    "118dk": "Fjernes automatisk når du beder om et hemmeligt nummer hos dit teleselskab",
+    "robinsonlisten": "Officiel framelding af markedsføring via CPR-registret — virksomheder er juridisk forpligtet til at tjekke",
+    "navneadressebeskyttelse": "Navne- og adressebeskyttelse på myndighedsniveau — skal fornyes hvert år",
+    "experian-rki": "Kreditregister — negative registreringer fjernes automatisk efter 5 år eller ved gældsafvikling",
+    "dun-bradstreet": "Primært virksomhedsdata — fjernelse af personlige data muligt via GDPR-anmodning",
+    "google-right-to-be-forgotten": "EU-ret til at blive glemt — fjerner kun fra EU Google-resultater, ikke fra kilden",
+    "eniro": "BankID påkrævet til identitetsbekræftelse",
+    "hitta": "BankID påkrævet til identitetsbekræftelse",
+    "ratsit": "Har udgivningsbevis — kan juridisk afvise GDPR-sletningsanmodninger under svensk grundlovsfritagelse",
+    "mrkoll": "Har udgivningsbevis — kan kun skjule telefon/adresse, ikke fuldt slette. GDPR-sletning kan afvises.",
+    "merinfo": "BankID-fjernelsesproces — relativt ligetil",
+    "birthday": "Send email til info@birthday.se for hurtigst behandling",
+    "1881": "Standard GDPR-baseret sletningsproces",
+    "gulesider": "Standard GDPR-baseret sletning — kontakt privatlivsteamet direkte",
+    "fonecta": "Send email til tietosuoja@fonecta.com for GDPR-baseret sletning",
+    "spokeo": "Kan beholde data for betalende kontoindehavere selv efter fjernelse",
+    "beenverified": "Ejer også PeopleLooker og PeopleSmart",
+    "intelius": "Ejer 15+ relaterede personsøgningssider — framelding dækker dem alle",
+    "mylife": "Kendt for aggressivt mersalg under frameldingsprocessen",
+    "peoplefinder": "Kan kræve ID-verifikation for visse anmodninger",
+    "radaris": "Kan kræve flere opfølgninger for at sikre fuldstændig fjernelse",
+    "pipl": "Aggregator — data skal fjernes fra de oprindelige kildesider individuelt",
+    "oracle-datalogix": "Kompleks virksomhedsproces — kan tage længere tid end andre datamæglere"
+  },
+  "rightsPage": {
+    "metadata": {
+      "title": "Dine GDPR-rettigheder | Breach Guard",
+      "description": "Forstå dine GDPR-rettigheder og kopiér klar-til-afsendelse skabeloner på dansk. Anmod om indsigt, sletning, berigtigelse og mere — helt gratis."
+    },
+    "heading": "Dine GDPR-rettigheder",
+    "subheading": "Forstå dine databeskyttelsesrettigheder under EU-lovgivning og brug klar-til-afsendelse skabeloner til at udøve dem.",
+    "disclaimer": "Disse skabeloner er kun til informationsformål og udgør ikke juridisk rådgivning. Kontakt en juridisk rådgiver for specifikke situationer."
+  },
+  "gdprRights": {
+    "deadline": "{days} dages frist",
+    "copyTemplate": "Kopiér skabelon",
+    "copied": "Kopieret!",
+    "templatePreview": "Skabelonvisning",
+    "expandTemplate": "Vis fuld skabelon",
+    "collapseTemplate": "Skjul fuld skabelon",
+    "subjectLabel": "Emne",
+    "placeholderNote": "Felter markeret [UDFYLD] skal udfyldes med dine oplysninger før afsendelse.",
+    "rights": {
+      "access": {
+        "title": "Ret til indsigt",
+        "description": "Du kan anmode om en komplet kopi af alle personoplysninger, som en virksomhed har om dig. De skal fortælle dig, hvilke data de har, hvorfor de behandler dem, hvem de deler dem med, og hvor længe de opbevarer dem.",
+        "whenToUse": "Brug denne, når du vil vide, hvilke data en virksomhed har indsamlet om dig, eller efter at have fundet din email i et datalæk."
+      },
+      "rectification": {
+        "title": "Ret til berigtigelse",
+        "description": "Hvis en virksomhed har unøjagtige eller ufuldstændige personoplysninger om dig, kan du anmode om, at de retter eller supplerer dem uden unødig forsinkelse.",
+        "whenToUse": "Brug denne, når dine personlige oplysninger er forkerte, forældede eller ufuldstændige — for eksempel en gammel adresse eller et forkert stavet navn."
+      },
+      "erasure": {
+        "title": "Ret til sletning",
+        "description": "Også kendt som 'retten til at blive glemt'. Du kan anmode en virksomhed om at slette alle dine personoplysninger, når de ikke længere er nødvendige, du trækker dit samtykke tilbage, eller de blev behandlet ulovligt.",
+        "whenToUse": "Brug denne, når du vil have en virksomhed til at slette dine data helt — for eksempel fjerne dig selv fra en datamægler eller lukke en gammel konto."
+      },
+      "restriction": {
+        "title": "Ret til begrænsning",
+        "description": "Du kan anmode en virksomhed om midlertidigt at stoppe behandlingen af dine data, mens en tvist løses. Dine data opbevares, men bruges ikke aktivt.",
+        "whenToUse": "Brug denne, når du har anfægtet nøjagtigheden af dine data eller gjort indsigelse mod behandling, og ønsker at de sætter det på pause, mens sagen løses."
+      },
+      "portability": {
+        "title": "Ret til dataportabilitet",
+        "description": "Du kan anmode om dine personoplysninger i et struktureret, maskinlæsbart format (som CSV eller JSON) og få dem overført direkte til en anden udbyder.",
+        "whenToUse": "Brug denne, når du vil flytte dine data fra én tjeneste til en anden — for eksempel skifte emailudbyder eller sociale medier."
+      },
+      "objection": {
+        "title": "Ret til indsigelse",
+        "description": "Du kan gøre indsigelse mod en virksomheds behandling af dine data til direkte markedsføring (absolut ret) eller på grundlag af legitim interesse. Ved markedsføring skal de stoppe med det samme.",
+        "whenToUse": "Brug denne, når du modtager uønskede markedsføringsemails, eller når en virksomhed behandler dine data baseret på 'legitim interesse', og du er uenig."
+      }
+    },
+    "escalation": {
+      "title": "Hvad hvis de ikke svarer?",
+      "description": "Hvis en virksomhed ikke handler på din anmodning, følg disse trin for at eskalere:",
+      "send": {
+        "title": "Send din anmodning",
+        "description": "Send skabelonen via email til virksomhedens DPO eller privatlivskontakt.",
+        "dayLabel": "Dag 0"
+      },
+      "wait30": {
+        "title": "Vent 30 dage",
+        "description": "Virksomheden skal svare inden for 30 dage (art. 12(3) GDPR). De kan forlænge med 2 måneder ved komplekse anmodninger, men skal informere dig inden for den første måned.",
+        "dayLabel": "30 dage"
+      },
+      "reminder": {
+        "title": "Send en påmindelse",
+        "description": "Hvis intet svar efter 30 dage, send en opfølgning med reference til din oprindelige anmodningsdato og oplys, at du vil indgive en klage, hvis de ignorerer dig.",
+        "dayLabel": "Dag 30"
+      },
+      "wait14": {
+        "title": "Vent 14 dage mere",
+        "description": "Giv dem en sidste frist til at svare på din påmindelse.",
+        "dayLabel": "14 dage"
+      },
+      "complaint": {
+        "title": "Indgiv klage til Datatilsynet",
+        "description": "Indgiv en klage via Virk.dk (kræver MitID) eller kontakt dt@datatilsynet.dk. Du kan også klage per brev eller telefon.",
+        "dayLabel": "Dag 44+",
+        "link": "Lær hvordan du indgiver en klage"
+      }
+    }
+  },
+  "gdprTemplates": {
+    "access": {
+      "subject": "Anmodning om indsigt i henhold til GDPR art. 15",
+      "body": "Til rette vedkommende,\n\nJeg anmoder hermed om indsigt i henhold til artikel 15 i GDPR. Bekræft venligst, om I behandler personoplysninger vedrørende mig (som angivet i art. 15(1) GDPR).\n\nI bekræftende fald anmoder jeg om følgende oplysninger i henhold til art. 15(1) GDPR:\n1. Alle personoplysninger vedrørende mig, som I har lagret;\n2. Formålene med behandlingen;\n3. De kategorier af personoplysninger, der behandles;\n4. De modtagere, som mine data er blevet videregivet til;\n5. Den forventede opbevaringsperiode;\n6. Oplysninger om dataens kilde.\n\nHvis I har overført mine personoplysninger til et tredjeland eller en international organisation, anmoder jeg om at blive informeret om de fornødne garantier i henhold til art. 46 GDPR.\n\n[UDFYLD: Dine identifikationsoplysninger, f.eks. fulde navn, fødselsdato, adresse, emailadresse]\n\nBesvar venligst inden for én måned som krævet i art. 12(3) GDPR.\n\nMed venlig hilsen,\n[UDFYLD: Dit navn]"
+    },
+    "rectification": {
+      "subject": "Anmodning om berigtigelse i henhold til GDPR art. 16",
+      "body": "Til rette vedkommende,\n\nJeg anmoder hermed om berigtigelse af unøjagtige personoplysninger vedrørende mig i henhold til artikel 16 i GDPR.\n\nFølgende data er unøjagtige eller ufuldstændige og skal rettes:\n[UDFYLD: Beskriv hvilke data der er forkerte, og hvad de korrekte data er]\n\nJeg anmoder om, at I retter disse data uden unødig forsinkelse.\n\n[UDFYLD: Dine identifikationsoplysninger, f.eks. fulde navn, fødselsdato, adresse, emailadresse]\n\nBesvar venligst inden for én måned som krævet i art. 12(3) GDPR.\n\nMed venlig hilsen,\n[UDFYLD: Dit navn]"
+    },
+    "erasure": {
+      "subject": "Anmodning om sletning i henhold til GDPR art. 17",
+      "body": "Til rette vedkommende,\n\nJeg anmoder hermed om sletning af personoplysninger vedrørende mig i henhold til artikel 17 i GDPR.\n\nJeg anmoder om, at I sletter alle personoplysninger vedrørende mig uden unødig forsinkelse. Jeg mener, at sletningen er påkrævet, fordi ét af følgende gælder (art. 17(1) GDPR):\n- Oplysningerne er ikke længere nødvendige til det formål, de blev indsamlet til;\n- Jeg trækker mit samtykke tilbage, som behandlingen var baseret på;\n- Jeg gør indsigelse mod behandlingen, og der er ingen tungtvejende legitime grunde;\n- Oplysningerne er blevet behandlet ulovligt;\n- Oplysningerne skal slettes for at overholde en retlig forpligtelse.\n\n[UDFYLD: Du kan angive yderligere grunde til din sletningsanmodning]\n\nHvis I har offentliggjort personoplysningerne, er I også forpligtet til at tage rimelige skridt til at informere andre dataansvarlige, der behandler disse data, om min sletningsanmodning (art. 17(2) GDPR).\n\n[UDFYLD: Dine identifikationsoplysninger, f.eks. fulde navn, fødselsdato, adresse, emailadresse]\n\nBesvar venligst inden for én måned som krævet i art. 12(3) GDPR.\n\nMed venlig hilsen,\n[UDFYLD: Dit navn]"
+    },
+    "restriction": {
+      "subject": "Anmodning om begrænsning af behandling i henhold til GDPR art. 18",
+      "body": "Til rette vedkommende,\n\nJeg anmoder hermed om begrænsning af behandlingen af mine personoplysninger i henhold til artikel 18 i GDPR.\n\nJeg anmoder om, at I begrænser behandlingen af mine personoplysninger, fordi ét af følgende gælder (art. 18(1) GDPR):\n- Jeg bestrider nøjagtigheden af personoplysningerne — begræns behandlingen, indtil nøjagtigheden er verificeret;\n- Behandlingen er ulovlig, og jeg modsætter mig sletning og anmoder om begrænsning i stedet;\n- I har ikke længere brug for oplysningerne, men jeg har brug for dem til retskrav;\n- Jeg har gjort indsigelse mod behandling i henhold til art. 21(1) — begræns behandlingen, indtil det er verificeret, om jeres legitime grunde tilsidesætter mine.\n\n[UDFYLD: Angiv hvilken betingelse der gælder og giv detaljer]\n\n[UDFYLD: Dine identifikationsoplysninger, f.eks. fulde navn, fødselsdato, adresse, emailadresse]\n\nBesvar venligst inden for én måned som krævet i art. 12(3) GDPR.\n\nMed venlig hilsen,\n[UDFYLD: Dit navn]"
+    },
+    "portability": {
+      "subject": "Anmodning om dataportabilitet i henhold til GDPR art. 20",
+      "body": "Til rette vedkommende,\n\nJeg anmoder hermed om dataportabilitet i henhold til artikel 20 i GDPR.\n\nJeg anmoder om, at I udleverer alle personoplysninger vedrørende mig, som jeg har givet til jer, i et struktureret, almindeligt anvendt og maskinlæsbart format (f.eks. CSV, JSON eller XML).\n\n[UDFYLD: Valgfrit, hvis du ønsker direkte overførsel] Jeg anmoder også om, at I overfører disse data direkte til følgende dataansvarlige:\n[UDFYLD: Navn og kontaktoplysninger på den modtagende dataansvarlige, hvis relevant]\n\n[UDFYLD: Dine identifikationsoplysninger, f.eks. fulde navn, fødselsdato, adresse, emailadresse]\n\nBesvar venligst inden for én måned som krævet i art. 12(3) GDPR.\n\nMed venlig hilsen,\n[UDFYLD: Dit navn]"
+    },
+    "objection": {
+      "subject": "Indsigelse mod databehandling i henhold til GDPR art. 21",
+      "body": "Til rette vedkommende,\n\nJeg gør hermed indsigelse mod behandlingen af personoplysninger vedrørende mig i henhold til artikel 21 i GDPR.\n\n[UDFYLD: Vælg ét af følgende afsnit og slet det andet]\n\nJeg gør indsigelse mod behandlingen af mine data til direkte markedsføringsformål (art. 21(2) GDPR). I skal straks og uden undtagelse ophøre med at behandle mine data til dette formål.\n\nJeg gør indsigelse mod behandlingen af mine data baseret på art. 6(1)(e) eller (f) GDPR (opgave i offentlighedens interesse eller legitim interesse). Mine grunde til indsigelse er:\n[UDFYLD: Beskriv din særlige situation og grundene til indsigelse]\n\n[UDFYLD: Dine identifikationsoplysninger, f.eks. fulde navn, fødselsdato, adresse, emailadresse]\n\nBesvar venligst inden for én måned som krævet i art. 12(3) GDPR.\n\nMed venlig hilsen,\n[UDFYLD: Dit navn]"
+    }
+  },
+  "gdprWizard": {
+    "metadata": {
+      "title": "GDPR-rettighedsguide | Breach Guard",
+      "description": "Find den rette GDPR-handling for din situation med vores gratis guide på dansk. Besvar et par spørgsmål og få en passende skabelon i 3 trin."
+    },
+    "heading": "Find din GDPR-rettighed",
+    "subheading": "Besvar et par spørgsmål, så anbefaler vi den rette skabelon til din situation.",
+    "steps": {
+      "situation": "Situation",
+      "details": "Detaljer",
+      "result": "Resultat"
+    },
+    "situations": {
+      "breach": {
+        "title": "Mine data var i et datalæk",
+        "description": "En virksomhed har mistet eller eksponeret mine personoplysninger i et datalæk.",
+        "details": "Efter et datalæk har du ret til at vide præcis, hvilke personoplysninger der blev kompromitteret. Start med at anmode om en komplet kopi af dine data fra virksomheden. Du kan også tjekke hvilke datalæk der har berørt din email på vores emailtjek-side.",
+        "recommendation": "Anmod om en kopi af alle dine personoplysninger fra den berørte virksomhed. Så kan du se præcis, hvad der blev eksponeret, og handle målrettet.",
+        "nextSteps": "1. Send indsigtsanmodningen til virksomhedens DPO eller privatlivskontakt.\n2. Vent op til 30 dage på deres svar.\n3. Gennemgå hvilke data der blev eksponeret, og overvej at anmode om sletning af unødvendige data.\n4. Hvis de ikke svarer, følg vores eskaleringsguide.",
+        "checkBreachesLink": "Tjek hvilke datalæk der har berørt din email"
+      },
+      "data-removal": {
+        "title": "Fjern mig fra en datamægler",
+        "description": "En datamægler eller hjemmeside har mine personoplysninger, og jeg vil have dem slettet.",
+        "details": "Under GDPR har du ret til at anmode om sletning af dine personoplysninger. Datamæglere skal slette dine oplysninger, når du beder om det, medmindre de har en juridisk forpligtelse til at opbevare dem. Tjek vores datamægler-frameldingsguide for trin-for-trin instruktioner.",
+        "recommendation": "Send en sletningsanmodning til datamægleren med krav om, at de sletter alle dine personoplysninger. De skal efterkomme det inden for 30 dage.",
+        "nextSteps": "1. Send sletningsskabelonen til datamæglerens privatlivskontakt.\n2. Hvis mægleren har en selvbetjent framelding, brug også den.\n3. Vent op til 30 dage på bekræftelse af sletning.\n4. Bekræft at dine data er fjernet efter fristen.",
+        "brokerGuideLink": "Se datamægler-frameldingsguider"
+      },
+      "unwanted-marketing": {
+        "title": "Stop uønsket markedsføring",
+        "description": "En virksomhed bliver ved med at sende mig markedsføringsemails eller beskeder, jeg ikke ønsker.",
+        "details": "Din ret til at gøre indsigelse mod direkte markedsføring er absolut under GDPR. Virksomheden skal straks stoppe behandlingen af dine data til markedsføringsformål — uden undtagelser. Det gælder email, SMS, telefonopkald og postmarkedsføring.",
+        "recommendation": "Send en indsigelse for at stoppe al direkte markedsføring. Virksomheden skal straks efterkomme det — det er en absolut rettighed.",
+        "nextSteps": "1. Send indsigelsesskabelonen til virksomhedens privatlivs- eller markedsføringsafdeling.\n2. De skal stoppe al markedsføring med det samme — der er ingen 30-dages frist for markedsføringsindsigelser.\n3. Hvis markedsføringen fortsætter efter din indsigelse, indgiv en klage til Datatilsynet."
+      },
+      "wrong-data": {
+        "title": "Mine data er forkerte",
+        "description": "En virksomhed har forkerte eller forældede oplysninger om mig, som jeg vil have rettet.",
+        "details": "Hvis en virksomhed har unøjagtige eller ufuldstændige data om dig, er de forpligtet til at rette dem uden unødig forsinkelse. Vær specifik om, hvad der er forkert, og hvad de korrekte oplysninger er.",
+        "recommendation": "Anmod om berigtigelse af de unøjagtige data. Vær specifik om, hvad der er forkert, og angiv de korrekte oplysninger.",
+        "nextSteps": "1. Send berigtigelsesskabelonen med angivelse af, hvilke data der er forkerte.\n2. Medtag de korrekte oplysninger, så de kan opdatere deres registre.\n3. Vent op til 30 dage på bekræftelse.\n4. Hvis de afviser eller ikke svarer, overvej at eskalere."
+      },
+      "access-request": {
+        "title": "Hvilke data har de om mig?",
+        "description": "Jeg vil vide, hvilke personoplysninger en virksomhed har indsamlet om mig.",
+        "details": "En indsigtsanmodning giver dig ret til at modtage en komplet kopi af alle personoplysninger, som en virksomhed har om dig. De skal fortælle dig, hvilke data de har, hvorfor de behandler dem, hvem de deler dem med, og hvor længe de opbevarer dem. Du kan også anmode om dine data i et overførbart format.",
+        "recommendation": "Send en indsigtsanmodning for at finde ud af alt, hvad en virksomhed ved om dig. Du modtager en komplet kopi af dine data inden for 30 dage.",
+        "nextSteps": "1. Send indsigtsanmodningen til virksomhedens DPO eller privatlivskontakt.\n2. Vent op til 30 dage — de skal svare.\n3. Gennemgå de data, de sender dig.\n4. Hvis du vil flytte dine data til en anden tjeneste, brug portabilitetsskabelonen."
+      }
+    },
+    "backButton": "Tilbage",
+    "nextButton": "Fortsæt",
+    "restartButton": "Start forfra",
+    "recommendedRight": "Anbefalet rettighed",
+    "alsoConsider": "Du kan også overveje:",
+    "deadline": "30 dages svarfrist",
+    "escalationLink": "Hvad hvis de ikke svarer?",
+    "complaintLink": "Indgiv en klage",
+    "wizardCta": {
+      "title": "Usikker på hvilken rettighed?",
+      "description": "Besvar et par spørgsmål, så anbefaler vi den rette GDPR-skabelon til din situation.",
+      "button": "Find din rettighed"
+    },
+    "breachGuidanceLink": "Udøv dine GDPR-rettigheder"
+  },
+  "breachActions": {
+    "title": "Hvilke data blev eksponeret?",
+    "description": "Vælg hvilke typer data der var berørt for at se anbefalede GDPR-handlinger.",
+    "scenarios": {
+      "passwords-exposed": {
+        "label": "Adgangskoder eller loginoplysninger",
+        "action": "Anmod om en kopi af dine data for at bekræfte, hvad der blev opbevaret. Skift alle berørte adgangskoder med det samme."
+      },
+      "financial-data": {
+        "label": "Finansielle data eller kreditkortoplysninger",
+        "action": "Anmod om dine data og bed virksomheden om at begrænse behandlingen, mens du vurderer konsekvenserne. Overvåg dine konti for uautoriseret aktivitet."
+      },
+      "personal-info": {
+        "label": "Personlige oplysninger (navn, adresse, telefon)",
+        "action": "Anmod om en kopi af dine data og overvej at anmode om fuld sletning for at minimere din eksponering."
+      },
+      "email-in-breach": {
+        "label": "Emailadresse",
+        "action": "Anmod om dine data og gør indsigelse mod enhver markedsføringsbrug. Hold øje med phishing-forsøg via din email."
+      },
+      "health-data": {
+        "label": "Sundhedsdata eller følsomme oplysninger",
+        "action": "Anmod om dine data og bed om begrænsning af behandlingen. Sundhedsdata har særlig beskyttelse under GDPR artikel 9."
+      }
+    },
+    "recommendedTemplates": "Anbefalede skabeloner:",
+    "viewAllRights": "Se alle GDPR-rettigheder"
+  },
+  "complaintGuide": {
+    "metadata": {
+      "title": "Indgiv en klage | Breach Guard",
+      "description": "Trin-for-trin guide til at indgive en GDPR-klage til Datatilsynet. Lær hvad du skal forberede, hvordan du indgiver via Virk.dk, og hvad der sker bagefter."
+    },
+    "heading": "Indgiv en klage til Datatilsynet",
+    "subheading": "Hvis en virksomhed har ignoreret din GDPR-anmodning, kan du indgive en klage til Datatilsynet.",
+    "checklist": {
+      "title": "Før du indgiver",
+      "description": "Sørg for at du har gennemført disse trin, før du indgiver en klage:",
+      "items": {
+        "contactedCompany": "Jeg har kontaktet virksomheden direkte om problemet",
+        "thirtyDaysPassed": "Der er gået mindst 30 dage siden min anmodning",
+        "evidenceGathered": "Jeg har gemt kopier af min korrespondance (emails, breve)",
+        "originalRequestCopy": "Jeg har en kopi af min oprindelige GDPR-anmodning"
+      }
+    },
+    "steps": {
+      "title": "Sådan indgiver du",
+      "login": {
+        "title": "Log ind med MitID",
+        "description": "Klageformularen på Virk.dk kræver MitID til identifikation."
+      },
+      "fillForm": {
+        "title": "Udfyld klageformularen",
+        "description": "Beskriv din klage, herunder hvilken virksomhed, hvilke data og hvornår du først kontaktede dem."
+      },
+      "submit": {
+        "title": "Indsend og gem din kvittering",
+        "description": "Efter indsendelse skal du gemme din kvittering og en kopi af klagen til dine egne arkiver."
+      }
+    },
+    "fileComplaint": "Gå til Virk.dk klageformular",
+    "noMitId": {
+      "title": "Ingen MitID?",
+      "description": "Du kan også indgive per email, telefon eller brev:",
+      "email": "Email: dt@datatilsynet.dk",
+      "phone": "Telefon: 33 19 32 00",
+      "mail": "Brev: Carl Jacobsens Vej 35, 2500 Valby"
+    },
+    "crossBorder": {
+      "title": "Hvad med virksomheder uden for Danmark?",
+      "description": "Du indgiver altid klage til Datatilsynet, også selvom virksomheden er baseret i et andet EU-land. Datatilsynet koordinerer med tilsynsmyndigheden i virksomhedens land gennem GDPR's one-stop-shop-mekanisme. Du behøver ikke selv at finde den rette myndighed."
+    },
+    "fallbackNote": "Hvis dette link ikke virker, besøg datatilsynet.dk for den aktuelle klageformular.",
+    "complaintCta": {
+      "title": "Ignorerer virksomheden dig?",
+      "description": "Hvis en virksomhed ikke har svaret på din GDPR-anmodning inden for 30 dage, kan du eskalere.",
+      "button": "Indgiv en klage"
+    },
+    "disclaimer": "Denne guide er kun til informationsformål og udgør ikke juridisk rådgivning."
+  },
+  "privacyPage": {
+    "metadata": {
+      "title": "Privatlivspolitik | Breach Guard",
+      "description": "Læs vores privatlivspolitik og se hvordan Breach Guard beskytter dig. Ingen tracking, ingen cookies, ingen datalagring — og al kildekode er offentlig."
+    },
+    "heading": "Privatlivspolitik",
+    "tldr": "Kort sagt: Vi tracker dig ikke, gemmer ingen data, bruger ingen cookies, og al kildekode er offentligt tilgængelig.",
+    "sections": {
+      "tracking": {
+        "title": "Ingen tracking",
+        "body": "Breach Guard bruger ingen analyseværktøjer, ingen tracking-pixels og ingen fingerprinting. Vi ved ikke hvem du er, hvor du kommer fra, eller hvad du gør på siden. Det er med vilje — vi har simpelthen ikke brug for den viden for at hjælpe dig."
+      },
+      "cookies": {
+        "title": "Ingen cookies",
+        "body": "Breach Guard sætter ingen cookies overhovedet — hverken tracking-cookies, funktionelle cookies eller andre. Din sprogpræference huskes via URL'en, ikke en cookie. Derfor behøver vi heller ikke et cookiebanner."
+      },
+      "dataHandling": {
+        "title": "Sådan behandler vi data",
+        "body": "Når du tjekker din email, sendes den krypteret til vores server, som slår den op via <hibpLink>Have I Been Pwned</hibpLink> og <xonLink>XposedOrNot</xonLink>. Når du tjekker en adgangskode, forlader den aldrig din browser — vi bruger k-Anonymity, så kun et lille hash-fragment sendes. Intet gemmes på vores servere. Prøv vores <emailCheckLink>emailtjek</emailCheckLink> eller <passwordCheckLink>adgangskodetjek</passwordCheckLink> for at se det i praksis."
+      },
+      "openSource": {
+        "title": "Open source",
+        "body": "Al kildekode er offentligt tilgængelig på <githubLink>GitHub</githubLink>. Du kan gennemgå præcis hvad koden gør, verificere vores påstande, eller foreslå forbedringer. Gennemsigtighed er ikke bare et løfte — det er noget du kan tjekke selv."
+      }
+    },
+    "lastUpdated": "Sidst opdateret: marts 2026",
+    "contact": "Spørgsmål om privatlivspolitikken? Kontakt os på <emailLink>privacy@breachguard.dk</emailLink>.",
+    "gdprNote": "Vil du vide mere om dine rettigheder? Læs om <gdprRightsLink>dine GDPR-rettigheder</gdprRightsLink>."
+  },
+  "footer": {
+    "tools": {
+      "heading": "Værktøjer",
+      "password": "Adgangskode-tjek",
+      "email": "Email-tjek",
+      "brokers": "Datamægler-guide",
+      "rights": "GDPR-rettigheder"
+    },
+    "guides": {
+      "heading": "Guides",
+      "dataBreach": "Hvad er et databrud?",
+      "removeBrokers": "Fjern dig fra data brokers"
+    },
+    "legal": {
+      "heading": "Juridisk",
+      "privacy": "Privatlivspolitik"
+    },
+    "copyright": "© {year} Breach Guard",
+    "noTracking": "Ingen tracking. Ingen cookies. Ingen konti."
+  },
+  "guideCallouts": {
+    "dataBreach": {
+      "title": "Lær mere om databrud",
+      "description": "Forstå hvad et databrud er, hvordan det sker, og hvad du kan gøre for at beskytte dig."
+    },
+    "removeBrokers": {
+      "title": "Fjern dine data fra data brokers",
+      "description": "Trin-for-trin guide til at fjerne dine personoplysninger fra datamæglere."
+    },
+    "readMore": "Læs guiden"
+  },
+  "guideLayout": {
+    "toc": "Indholdsfortegnelse",
+    "faq": "Ofte stillede spørgsmål",
+    "lastUpdated": "Sidst opdateret: marts 2026"
+  },
+  "dataBreachGuide": {
+    "metadata": {
+      "title": "Hvad er et databrud? | Breach Guard",
+      "description": "Lær hvad et databrud er, hvordan det sker, og hvad du kan gøre for at beskytte dig. Tjek om din email er berørt."
+    },
+    "heading": "Hvad er et databrud?",
+    "intro": "Hvert år bliver millioner af menneskers personlige data eksponeret i databrud. Fra store tech-giganter til små lokale virksomheder — ingen er immune. Når det sker, kan dine adgangskoder, emails, telefonnumre og andre følsomme oplysninger havne i hænderne på kriminelle. Alene i 2024 blev over 1 milliard dataposter eksponeret globalt, og tallet stiger år for år.\n\nDet kan lyde skræmmende, men der er gode nyheder: du kan tage konkrete skridt for at beskytte dig selv og minimere konsekvenserne. Denne guide forklarer hvad databrud er, hvordan de sker, hvilke data der typisk bliver eksponeret, og vigtigst af alt — hvad du kan gøre ved det. Vi gennemgår reelle eksempler fra de seneste år, og vi giver dig en tjekliste med handlinger du kan udføre med det same.\n\nUanset om du allerede er blevet berørt af et databrud, har modtaget en notifikation fra en tjeneste du bruger, eller bare vil forebygge og beskytte dig proaktivt, finder du svar og handlingsrettede råd her. Lad os starte med det grundlæggende.",
+    "sections": {
+      "whatIs": {
+        "title": "Hvad er et databrud?",
+        "content": "Et databrud opstår, når uautoriserede personer får adgang til personlige data, der er gemt af en virksomhed, organisation eller tjeneste. Det kan ske ved at hackere bryder ind i en database, men det kan også skyldes menneskelige fejl, fejlkonfigurerede systemer eller insidertrusler. I juridisk forstand er et databrud enhver sikkerhedshændelse, der fører til utilsigtet eller ulovlig adgang til, videregivelse af eller tab af personoplysninger.\n\nPersonlige data kan omfatte alt fra navne og emails til adgangskoder, CPR-numre, kreditkortoplysninger og sundhedsdata. Når disse data bliver eksponeret, kan de bruges til identitetstyveri, svindel, phishing-angreb og andre former for misbrug. Ofte sælges de eksponerede data videre på det mørke web, hvor kriminelle kan købe dem i store pakker.\n\nDet er vigtigt at forstå, at et databrud ikke nødvendigvis betyder, at en hacker aktivt har angrebet dig personligt. Det betyder, at en tjeneste du har brugt, ikke har formået at beskytte dine data tilstrækkeligt. Databrud kan ramme enhver virksomhed — uanset størrelse eller branche. Selv virksomheder med store sikkerhedsbudgetter bliver ramt. Under GDPR er virksomheder i EU forpligtet til at rapportere alvorlige databrud til myndighederne inden 72 timer, og i mange tilfælde også direkte til de berørte personer."
+      },
+      "howItHappens": {
+        "title": "Hvordan sker databrud?",
+        "content": "Databrud kan ske på mange forskellige måder. De mest almindelige årsager inkluderer:\n\nHacking og cyberangreb: Kriminelle bruger avancerede teknikker som SQL-injection, brute force-angreb eller zero-day exploits til at bryde ind i virksomheders systemer. Ofte scanner de automatisk efter kendte sårbarheder i software, der ikke er blevet opdateret.\n\nPhishing: Medarbejdere i virksomheder bliver narret til at afsløre loginoplysninger gennem falske emails eller hjemmesider. Bare ét kompromitteret login kan give adgang til hele databaser med kundedata.\n\nFejlkonfigurerede databaser: Nogle gange bliver databaser ved en fejl gjort offentligt tilgængelige uden adgangskontrol. Cloud-tjenester som Amazon S3 eller Elasticsearch har været involveret i adskillige læk, fordi standardindstillingerne ikke altid er sikre.\n\nInsidertrusler: Nuværende eller tidligere medarbejdere kan misbruge deres adgang til data — enten med vilje eller ved et uheld. En medarbejder der sender en database til den forkerte modtager, er teknisk set også et databrud.\n\nTredjepartssårbarheder: Mange virksomheder deler data med partnere og leverandører. Hvis en tredjepartspartner bliver kompromitteret, kan dine data også blive eksponeret, selvom den primære tjeneste ikke selv blev hacket."
+      },
+      "realExamples": {
+        "title": "Kendte databrud",
+        "content": "For at forstå omfanget af problemet er det nyttigt at se på nogle af de største databrud i nyere tid:\n\nFacebook/Meta (2021): Personlige data fra 533 millioner brugere blev lækket, herunder telefonnumre, fulde navne, fødselsdatoer, email-adresser og lokationsdata. Dataene stammede fra en sårbarhed i Facebooks kontaktimportfunktion, som hackere havde udnyttet til at scrape massive mængder brugerdata. Dataene blev gjort frit tilgængelige på hackerfora, hvilket betød at enhver med adgang til disse fora kunne downloade personoplysninger på hundredvis af millioner mennesker.\n\nLinkedIn (2021): 700 millioner brugerprofiler — næsten hele LinkedIns brugerbase — blev sat til salg på det mørke web. Dataene inkluderede emails, telefonnumre, arbejdspladsoplysninger, køn og geografisk placering. LinkedIn hævdede, at det teknisk set var data scraping og ikke et hack, men resultatet for brugerne var det samme: deres personlige oplysninger var eksponeret og tilgængelige for enhver der ville betale for dem.\n\nYahoo (2013-2014): Alle 3 milliarder Yahoo-konti blev kompromitteret i hvad der stadig regnes som det største databrud nogensinde. Bruddet blev først offentliggjort i 2016 og inkluderede navne, emails, telefonnumre, fødselsdatoer og sikkerhedsspørgsmål. Denne forsinkelse illustrerer hvor lang tid der kan gå, før et brud opdages.\n\nDisse eksempler illustrerer en vigtig pointe: selv de største og mest ressourcestærke tech-virksomheder i verden bliver ramt. Det er ikke et spørgsmål om, om en virksomhed bliver ramt, men hvornår. Derfor er det afgørende at tage personlige forholdsregler for at minimere konsekvenserne, når det sker."
+      },
+      "whatIsExposed": {
+        "title": "Hvilke data bliver eksponeret?",
+        "content": "De typer data, der eksponeres i et databrud, afhænger af hvilken tjeneste der er blevet kompromitteret. Her er de mest almindelige typer, og hvorfor hver type udgør en risiko:\n\nEmail-adresser: Næsten altid inkluderet i databrud og bruges som udgangspunkt for phishing-angreb og yderligere kompromittering. Din email-adresse er i praksis din digitale identitet — den forbinder dig til hundredvis af onlinekonti.\n\nAdgangskoder: Ofte gemt i hashede formater, men svage adgangskoder kan knækkes hurtigt med moderne hardware. Hvis du genbruger adgangskoder, kan ét lækket kodeord give adgang til mange af dine konti. Dette er grunden til, at unikke adgangskoder er så afgørende.\n\nNavne og kontaktoplysninger: Fulde navne, telefonnumre, fysiske adresser — data der kan bruges til identitetstyveri, målrettet svindel eller social engineering-angreb, hvor kriminelle udgiver sig for at være dig.\n\nFinansielle data: Kreditkortnumre og bankoplysninger er sjældnere, men forekommer. Tjenester der behandler betalinger, er ofte underlagt strengere sikkerhedskrav (PCI DSS), men brud sker stadig.\n\nIP-adresser og enhedsdata: Kan afsløre din omtrentlige geografiske placering og bruges til at bygge detaljerede profiler af dine vaner og bevægelser.\n\nSundhedsdata: Hospitalers og sundhedstjenesters brud kan eksponere diagnoser, medicinordinationer og forsikringsoplysninger — nogle af de mest følsomme data der findes, og data som kan bruges til diskrimination eller afpresning.\n\nBrugsdata: Browserhistorik, søgehistorik, appbrug og andre adfærdsdata kan afsløre private aspekter af dit liv, som du måske ikke ønsker at dele med andre."
+      },
+      "howToCheck": {
+        "title": "Sådan tjekker du om du er berørt",
+        "content": "Den mest effektive måde at tjekke om dine data er blevet eksponeret, er at bruge en overvågningstjeneste der sammenligner din email med kendte databrud. Brug vores <emailCheckLink>email-tjek</emailCheckLink> til at se om din email optræder i kendte databrud. Vores værktøj bruger k-Anonymity-teknikken, som betyder at din fulde email aldrig sendes til tredjeparter — kun et krypteret fragment bruges til opslaget. Det er helt gratis og kræver ingen konto.\n\nNår du kører et tjek, sammenligner vi din email mod en database med over 14 milliarder kompromitterede konti fra tusindvis af kendte databrud. Resultatet viser dig præcis hvilke brud din email er fundet i, hvornår bruddet skete, og hvilke typer data der blev eksponeret. Denne information er afgørende for at vide, hvilke adgangskoder du skal skifte, og hvilke konti du skal overvåge ekstra.\n\nHvis din email dukker op i et eller flere databrud, skal du ikke gå i panik. Det er normalt — de fleste aktive internetbrugere optræder i mindst ét databrud. Det vigtige er at handle hurtigt: skift adgangskoder på berørte tjenester, aktiver to-faktor-autentificering, og overvåg dine konti for mistænkelig aktivitet i de efterfølgende uger.\n\nDet anbefales at tjekke din email regelmæssigt — nye databrud opdages løbende, og et tjek i dag udelukker ikke, at din email dukker op i morgen. Mange eksperter anbefaler at tjekke mindst hver tredje måned."
+      },
+      "howToProtect": {
+        "title": "Sådan beskytter du dig",
+        "content": "Du kan ikke forhindre virksomheder i at blive hacket, men du kan minimere konsekvenserne for dig selv. Her er en praktisk tjekliste med de vigtigste forholdsregler:\n\nBrug unikke adgangskoder til hver tjeneste: Dette er den vigtigste enkelthandling du kan tage. Hvis én tjeneste bliver kompromitteret, er dine andre konti stadig sikre. Brug en adgangskodemanager som Bitwarden, 1Password eller KeePass til at generere og holde styr på stærke, unikke adgangskoder til alle dine konti. En god adgangskode er mindst 12 tegn lang og indeholder en blanding af bogstaver, tal og specialtegn — men med en adgangskodemanager behøver du ikke huske dem.\n\nAktiver to-faktor-autentificering (2FA): Tilføj et ekstra lag sikkerhed til dine vigtigste konti — email, bank, sociale medier og cloud-lagring. Brug helst en autentifikator-app (Google Authenticator, Authy, Microsoft Authenticator) frem for SMS-baseret 2FA, da SMS kan opsnappes via SIM-swapping eller aflytning. Hardwarenøgler som YubiKey tilbyder det højeste sikkerhedsniveau.\n\nVær opmærksom på phishing: Efter et databrud stiger antallet af phishing-forsøg markant, fordi kriminelle nu har din email og ved hvilke tjenester du bruger. Vær ekstra skeptisk over for emails der beder om loginoplysninger eller indeholder presserende links. Tjek altid afsenderadressen og hover over links før du klikker. Husk: seriøse virksomheder beder aldrig om din adgangskode via email.\n\nOvervåg dine konti: Tjek regelmæssigt dine bank- og email-konti for uautoriserede handlinger. Sæt notifikationer op for usædvanlige login-forsøg. Mange banktjenester tilbyder realtidsnotifikationer for transaktioner — slå dem til.\n\nMinimer din digitale eksponering: Jo færre tjenester der har dine data, jo mindre er din angrebsflade. Slet konti du ikke bruger, og overvej om du virkelig behøver at opgive din rigtige email til enhver tjeneste. Brug eventuelt en separat email-adresse til nyhedsbreve og mindre vigtige registreringer.\n\nHold software opdateret: Mange angreb udnytter kendte sårbarheder i forældet software. Opdater dit operativsystem, browser og apps regelmæssigt. Slå automatiske opdateringer til hvor det er muligt — det er en af de mest effektive og lettest tilgængelige sikkerhedsforanstaltninger."
+      }
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "Er mine data blevet lækket?",
+          "answer": "Du kan tjekke det ved at bruge vores gratis email-tjek. Indtast din email-adresse, og vi sammenligner den sikkert med kendte databrud. De fleste aktive internetbrugere optræder i mindst ét databrud, så bliv ikke forskrækket — det vigtige er at handle på det."
+        },
+        {
+          "question": "Hvad skal jeg gøre hvis min email er i et databrud?",
+          "answer": "Skift straks adgangskoden til den berørte tjeneste, og aktivér to-faktor-autentificering hvis muligt. Hvis du har brugt den samme adgangskode andre steder, skal du skifte den der også. Overvåg dine konti for mistænkelig aktivitet i de følgende uger."
+        },
+        {
+          "question": "Kan jeg forebygge databrud?",
+          "answer": "Du kan ikke forhindre virksomheder i at blive hacket, men du kan minimere konsekvenserne. Brug unikke adgangskoder til hver tjeneste, aktivér to-faktor-autentificering, og begræns mængden af personlige data du deler med onlinetjenester."
+        },
+        {
+          "question": "Hvad er forskellen på et hack og et databrud?",
+          "answer": "Et hack er et bevidst angreb, mens et databrud er enhver hændelse hvor data bliver eksponeret — det kan også skyldes fejlkonfigurationer, menneskelige fejl eller insidertrusler. Ikke alle databrud involverer hacking, men alle resulterer i eksponerede data."
+        },
+        {
+          "question": "Hvor lang tid tager det at opdage et databrud?",
+          "answer": "I gennemsnit tager det over 200 dage at opdage et databrud. Det betyder, at dine data kan have været eksponeret i måneder, før nogen opdager det. Derfor er regelmæssig overvågning og proaktive sikkerhedsforanstaltninger vigtige."
+        },
+        {
+          "question": "Er gratis tjenester mere udsatte for databrud?",
+          "answer": "Ikke nødvendigvis. Databrud rammer både gratis og betalte tjenester. Faktoren er typisk virksomhedens størrelse, sikkerhedspraksis og mængden af data de opbevarer — ikke om tjenesten er gratis eller ej."
+        }
+      ]
+    },
+    "cta": {
+      "label": "Tjek din email nu"
+    }
+  },
+  "brokerRemovalGuide": {
+    "metadata": {
+      "title": "Fjern dig fra data brokers | Breach Guard",
+      "description": "Lær hvordan du fjerner dine personoplysninger fra datamæglere. Trin-for-trin guide med GDPR-rettigheder og opt-out-links."
+    },
+    "heading": "Fjern dig fra data brokers",
+    "intro": "Datamæglere — også kaldet data brokers — er virksomheder der indsamler, organiserer og sælger personoplysninger om dig. De opererer ofte i det skjulte, og mange mennesker ved ikke engang, at deres data handles frit. Din fulde navn, email, telefonnummer, adresse og endda dine interesser og købehistorik kan være tilgængelige for enhver der er villig til at betale.\n\nDen gode nyhed er, at du har rettigheder. Under GDPR (den europæiske databeskyttelsesforordning) har du ret til at få dine data slettet, og datamæglere er juridisk forpligtet til at efterkomme din anmodning. Denne guide giver dig en komplet oversigt over, hvad datamæglere er, hvorfor du bør fjerne dine data, og præcis hvordan du gør det — trin for trin.\n\nUanset om du vil minimere din digitale eksponering, beskytte dig mod identitetstyveri, eller blot udøve dine rettigheder som EU-borger, finder du alle de værktøjer og oplysninger du har brug for her.",
+    "sections": {
+      "whatAreBrokers": {
+        "title": "Hvad er datamæglere?",
+        "content": "Datamæglere er virksomheder der specialiserer sig i at indsamle, aggregere og videresælge personoplysninger. De henter data fra en lang række kilder: offentlige registre og CPR-relaterede databaser, sociale medier, onlineadfærd via cookies og tracking-pixler, loyalitetsprogrammer, appdata og direkte datapartnerskaber med andre virksomheder. Mange datamæglere køber også data fra hinanden, hvilket skaber et netværk hvor dine oplysninger hurtigt spreder sig.\n\nDer findes flere typer datamæglere med forskellige forretningsmodeller. Personsøgningstjenester som Eniro, Krak og De Gule Sider gør det nemt at finde folks adresser og telefonnumre — ofte tilgængeligt for alle via en simpel Google-søgning. Marketing-datamæglere som Acxiom og Oracle Data Cloud bygger detaljerede profiler om forbrugeres interesser, købsvaner og livsstil, som de sælger til annoncører for målrettet reklame. Kreditoplysningsbureauer som Experian og TransUnion indsamler finansielle data til kreditvurderinger, og disse data kan påvirke din evne til at få lån eller forsikring.\n\nDet anslås, at den globale datamæglerindustri omsætter for over 300 milliarder dollars årligt. Din data er bogstaveligt talt en handelsvare — og i de fleste tilfælde har du aldrig givet dit informerede samtykke til, at den indsamles og sælges videre. Datamæglere opererer i en juridisk gråzone, hvor de udnytter det faktum, at mange mennesker ikke ved, at deres data handles."
+      },
+      "whyRemove": {
+        "title": "Hvorfor skal du fjerne dine data?",
+        "content": "At have dine personoplysninger spredt ud over mange datamæglere skaber en lang række risici. Jo flere steder dine data findes, jo større er din angrebsflade. Kriminelle kan bruge oplysninger fra datamæglere til at udføre målrettede phishing-angreb, identitetstyveri, social engineering eller endda fysisk stalking. Spam og uønsket markedsføring er også en direkte konsekvens — har du nogensinde undret dig over, hvordan en virksomhed du aldrig har hørt om, har fået din email?\n\nDine data bruges til at bygge detaljerede profiler, der kan påvirke alt fra de priser du ser online til de jobtilbud du modtager. Denne usynlige profilering sker uden dit vidende og uden din kontrol. Hvis dine data allerede er lækket i et databrud, er det endnu vigtigere at fjerne dem fra datamæglere, da kombinationen af lækket og købt data giver kriminelle et mere komplet billede. <dataBreachGuideLink>Læs mere om databrud</dataBreachGuideLink> og hvordan de påvirker dig.\n\nSelvom du ikke har noget at skjule, handler det om kontrol over dine egne oplysninger. Privatlivets fred er en grundlæggende rettighed, og at fjerne dine data fra datamæglere er en konkret handling du kan tage for at beskytte den."
+      },
+      "yourRights": {
+        "title": "Dine rettigheder under GDPR",
+        "content": "Som EU/EØS-borger har du stærke juridiske rettigheder, når det gælder dine personoplysninger. GDPR giver dig flere relevante rettigheder i forhold til datamæglere:\n\nRetten til sletning (Artikel 17): Du kan kræve, at en virksomhed sletter alle personoplysninger de har om dig. Datamæglere skal efterkomme denne anmodning inden 30 dage, medmindre de har en lovlig grund til at beholde dataene (f.eks. juridiske forpligtelser eller offentlig interesse).\n\nRetten til indsigelse (Artikel 21): Du kan protestere mod, at dine data bruges til direkte markedsføring eller profilering. Når du gør indsigelse, skal virksomheden straks ophøre med den pågældende behandling.\n\nRetten til indsigt (Artikel 15): Du kan bede om en kopi af alle personoplysninger en virksomhed har om dig, samt information om hvor de har fået dataene fra, og hvem de har delt dem med.\n\nRetten til begrænsning (Artikel 18): Du kan kræve, at en virksomhed begrænser brugen af dine data, mens en tvist om nøjagtighed eller lovlighed afklares.\n\nBrug vores <wizardLink>GDPR-wizard</wizardLink> til at generere en professionel anmodning om sletning, der indeholder alle de juridiske referencer datamægleren har brug for."
+      },
+      "stepByStep": {
+        "title": "Trin-for-trin fjernelse",
+        "content": "Her er en praktisk procedure til at fjerne dine data fra datamæglere. Processen kræver lidt tålmodighed, men hvert skridt er ligetil og kan gøres fra din computer derhjemme.\n\nTrin 1 — Identificér hvilke datamæglere der har dine data: Start med at søge dit eget navn, email og telefonnummer på Google. Bemærk alle resultater fra personsøgningstjenester og datamæglersider. Se vores <brokerGuideLink>datamægler-guide</brokerGuideLink> for en komplet liste over kendte datamæglere med direkte links til deres opt-out-sider. Lav en liste over alle de mæglere, hvor du finder dine oplysninger — dette bliver din arbejdsliste for de næste trin.\n\nTrin 2 — Start med de nemme: Mange datamæglere har automatiserede opt-out-formularer, hvor du kan anmode om sletning med blot et par klik. Start med disse for hurtige resultater og en følelse af fremskridt. Typisk tager det 5-10 minutter per mægler med en automatiseret formular.\n\nTrin 3 — Send formelle GDPR-anmodninger: For datamæglere der ikke har en nem opt-out-mulighed, send en formel anmodning om sletning per email. Henvis til GDPR Artikel 17 og kræv sletning af alle personoplysninger. Inkludér dit fulde navn og den email-adresse der er forbundet med din profil, så de kan finde dine data. Vores GDPR-wizard kan generere denne email for dig med alle nødvendige juridiske referencer.\n\nTrin 4 — Følg op efter 30 dage: GDPR kræver svar inden 30 dage. Markér datoen i din kalender for hver anmodning du sender. Hvis du ikke hører fra datamægleren, send en påmindelse med reference til din oprindelige anmodning og nævn, at du overvejer at indgive en klage til Datatilsynet. Denne trussel alene er ofte nok til at fremskynde processen.\n\nTrin 5 — Indgiv klage ved manglende svar: Hvis datamægleren ignorerer din anmodning efter både den første henvendelse og påmindelsen, kan du klage til Datatilsynet (datatilsynet.dk). De har myndighed til at pålægge bøder på op til 4% af virksomhedens globale omsætning og kræve efterlevelse. Klagen er gratis og kan indgives online."
+      },
+      "afterRemoval": {
+        "title": "Efter fjernelsen",
+        "content": "Det er vigtigt at forstå, at fjernelse fra datamæglere ikke er en permanent løsning. Datamæglere indsamler løbende nye data fra offentlige registre, partnerskaber og webscraping, og dine oplysninger kan dukke op igen efter et stykke tid — typisk inden for 3-6 måneder. Derfor anbefales det at gentage processen regelmæssigt, ligesom du regelmæssigt opdaterer dine adgangskoder.\n\nSæt en påmindelse i din kalender til at køre processen igen om 6-12 måneder. Med tiden bliver det markant hurtigere, fordi du kender proceduren, har kontaktoplysningerne klar, og ved præcis hvilke mæglere der kræver ekstra opmærksomhed. Mange datamæglere husker din opt-out-anmodning og vil ikke genindsamle dine data, men nye datamæglere kan dukke op i takt med at branchen vokser.\n\nOvervåg løbende din online tilstedeværelse: Søg dit eget navn og email regelmæssigt på Google for at se, om nye sider dukker op med dine oplysninger. Brug citationstegn omkring dit navn for mere præcise resultater. Jo hurtigere du opdager en ny kilde, jo hurtigere kan du handle.\n\nGem kopier af dine anmodninger og eventuelle svar: Denne dokumentation er vigtig, hvis du senere har brug for at indgive en klage til Datatilsynet. Et organiseret system med datoer, kontaktoplysninger og status gør hele processen langt mere overskuelig."
+      },
+      "prevention": {
+        "title": "Forebyg fremtidig dataindsamling",
+        "content": "Udover at fjerne eksisterende data kan du tage proaktive skridt for at minimere, hvor meget nye data der indsamles om dig i fremtiden. Forebyggelse er langt mere effektivt end oprydning — jo mindre data der indsamles fra starten, jo mindre skal du fjerne senere.\n\nBrug privatlivsvenlige browserudvidelser: Værktøjer som uBlock Origin, Privacy Badger og DuckDuckGo Privacy Essentials blokerer trackere og cookies, der bruges til at indsamle data om din browsingadfærd. Overvej også at bruge en privatlivsfokuseret browser som Firefox eller Brave som din primære browser, da de har indbyggede beskyttelsesmekanismer mod tracking.\n\nBegræns deling på sociale medier: Gennemgå dine privatlivsindstillinger på Facebook, LinkedIn, Instagram og andre platforme. Gør din profil så privat som muligt, og overvej hvad du deler offentligt. Husk at selv oplysninger du deler med \"venner\" kan ende hos datamæglere via tredjeparts-apps og datapartnerskaber. Fjern apps med adgang til din profil, som du ikke længere bruger.\n\nFravælg markedsføringssamtykke: Når du opretter konti eller tilmelder dig tjenester, fravælg altid markedsføring, datadeling med tredjeparter og profilering. Under GDPR skal disse felter være fravalgt som standard, men mange virksomheder forsøger at få dig til at vælge dem til med dark patterns og forvirrende formuleringer. Læs altid samtykketeksten grundigt.\n\nBrug en separat email til registreringer: Opret en dedikeret email-adresse til nyhedsbreve, onlineshops og mindre vigtige konti. Hold din primære email privat og brug den kun til vigtige tjenester som bank og arbejde. Nogle tjenester som SimpleLogin eller Apple's \"Skjul min email\" kan generere unikke email-aliaser for hver registrering.\n\nTjek privatlivspolitikker: Før du deler personoplysninger med en ny tjeneste, skum hurtigt deres privatlivspolitik for at se, om de deler data med tredjeparter. Hvis politikken er uklar eller for bred, overvej et alternativ. Husk: hvis produktet er gratis, er du ofte selv produktet."
+      }
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "Hvor lang tid tager det at blive fjernet?",
+          "answer": "Det varierer afhængigt af datamægleren. Under GDPR er de forpligtet til at svare inden 30 dage. Nogle datamæglere har automatiserede opt-out-formularer, der behandler anmodninger inden for få dage, mens andre kræver manuelle processer der kan tage op til den fulde 30-dages frist."
+        },
+        {
+          "question": "Er det gratis at blive fjernet?",
+          "answer": "Ja, under GDPR har du ret til gratis sletning af dine personoplysninger. En datamægler kan ikke opkræve betaling for at efterkomme din anmodning. Hvis en datamægler kræver betaling, er det i sig selv en overtrædelse af GDPR, som du kan klage over til Datatilsynet."
+        },
+        {
+          "question": "Kan datamæglere nægte at slette mine data?",
+          "answer": "I visse tilfælde kan en datamægler nægte, hvis de har en lovlig grund — f.eks. juridiske forpligtelser, offentlig interesse eller udøvelse af ytringsfriheden. Men for langt de fleste tilfælde af kommerciel datamægling har de ingen gyldig grund til at beholde dine data, og skal slette dem på anmodning."
+        },
+        {
+          "question": "Hvad hvis en datamægler ikke svarer?",
+          "answer": "Hvis du ikke får svar inden 30 dage, send en påmindelse med reference til din oprindelige anmodning. Nævn at du overvejer at klage til Datatilsynet. Hvis der fortsat ikke kommer svar, kan du indgive en formel klage på datatilsynet.dk — de har myndighed til at pålægge bøder på op til 4% af virksomhedens globale omsætning."
+        },
+        {
+          "question": "Skal jeg fjerne mig fra alle datamæglere?",
+          "answer": "Det er en god idé at starte med de mest impaktfulde: personsøgningstjenester (der viser dit navn og adresse offentligt) og marketing-datamæglere (der sælger dine profiler til annoncører). Du behøver ikke fjerne dig fra alle på én gang — prioritér og arbejd dig igennem listen over tid."
+        },
+        {
+          "question": "Kan jeg automatisere fjernelsen?",
+          "answer": "Der findes betalte tjenester som Incogni og DeleteMe der automatiserer processen, men det er fuldt muligt at gøre det selv med GDPR-værktøjer. Vores GDPR-wizard genererer en sletningsanmodning du kan sende direkte, og vores datamægler-guide indeholder opt-out-links til de mest almindelige datamæglere."
+        }
+      ]
+    },
+    "cta": {
+      "label": "Åbn datamægler-guiden"
+    }
+  },
+  "ogImage": {
+    "home": {
+      "title": "Er dine data blevet lækket?",
+      "description": "Tjek gratis om dine adgangskoder og e-mails er eksponeret i kendte datalæk."
+    },
+    "email": {
+      "title": "Tjek din e-mail for datalæk",
+      "description": "Find ud af om din e-mailadresse er blevet kompromitteret i kendte databrud."
+    },
+    "password": {
+      "title": "Tjek din adgangskode",
+      "description": "Se om din adgangskode er dukket op i kendte datalæk. Privat og sikkert."
+    },
+    "brokers": {
+      "title": "Fjern dig fra datamæglere",
+      "description": "Trin-for-trin guide til at slette dine persondata fra datamæglere."
+    },
+    "rights": {
+      "title": "Dine GDPR-rettigheder",
+      "description": "Forstå dine rettigheder og send klar-til-brug GDPR-anmodninger."
+    },
+    "privacy": {
+      "title": "Privatlivspolitik",
+      "description": "Ingen tracking, ingen konti, ingen cookies. Se hvordan vi beskytter dig."
+    },
+    "guideDataBreach": {
+      "title": "Hvad er et databrud?",
+      "description": "Alt du skal vide om databrud og hvordan du beskytter dig."
+    },
+    "guideBrokerRemoval": {
+      "title": "Fjern dig fra data brokers",
+      "description": "Komplet guide til at slette dine personoplysninger fra datamæglere."
+    }
+  }
+}

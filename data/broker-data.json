@@ -1,0 +1,632 @@
+[
+  {
+    "name": "Spokeo",
+    "slug": "spokeo",
+    "optOutUrl": "https://www.spokeo.com/optout",
+    "difficulty": "easy",
+    "timeEstimate": "5 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Go to spokeo.com and search for your name",
+      "Copy the URL of your profile listing",
+      "Visit the opt-out page and paste your profile URL",
+      "Enter your email address",
+      "Check your email and click the confirmation link"
+    ],
+    "notes": "May retain data for paid account holders even after removal",
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "Whitepages",
+    "slug": "whitepages",
+    "optOutUrl": "https://www.whitepages.com/suppression_requests",
+    "difficulty": "medium",
+    "timeEstimate": "10 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Search for your listing on whitepages.com",
+      "Click on your profile to view details",
+      "Copy the URL of your listing page",
+      "Go to the suppression request page",
+      "Enter the listing URL and your phone number",
+      "Complete phone verification via automated call or SMS code"
+    ],
+    "notes": null,
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "BeenVerified",
+    "slug": "beenverified",
+    "optOutUrl": "https://www.beenverified.com/app/optout/search",
+    "difficulty": "easy",
+    "timeEstimate": "5 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Visit the BeenVerified opt-out search page",
+      "Search for your record by name and state",
+      "Select your listing from the results",
+      "Enter your email address to confirm",
+      "Check your email and click the verification link"
+    ],
+    "notes": "Also owns PeopleLooker and PeopleSmart",
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "Intelius",
+    "slug": "intelius",
+    "optOutUrl": "https://suppression.peopleconnect.us/login",
+    "difficulty": "medium",
+    "timeEstimate": "10-15 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Go to the PeopleConnect suppression portal",
+      "Create an account or log in with your email",
+      "Search for your records across Intelius properties",
+      "Select the records you want removed",
+      "Confirm suppression request",
+      "Alternatively, email support@mailer.intelius.com or call 1-888-245-1655"
+    ],
+    "notes": "Owns 15+ related people-search sites \u2014 opt-out covers all of them",
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "MyLife",
+    "slug": "mylife",
+    "optOutUrl": "https://www.mylife.com/ccpa/index.pubview",
+    "difficulty": "hard",
+    "timeEstimate": "15-20 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Visit the MyLife CCPA privacy page",
+      "Search for your profile on mylife.com",
+      "Copy your profile URL",
+      "Submit a deletion request through the CCPA form",
+      "Email privacy@mylife.com with your profile link requesting removal",
+      "A phone call may be required to complete the process"
+    ],
+    "notes": "Known for aggressive upselling during opt-out process",
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "PeopleFinder",
+    "slug": "peoplefinder",
+    "optOutUrl": "https://www.peoplefinders.com/opt-out",
+    "difficulty": "medium",
+    "timeEstimate": "10 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Search for your profile on peoplefinders.com",
+      "Copy the URL of your listing",
+      "Go to the opt-out page",
+      "Submit the opt-out form with your listing URL",
+      "Wait 5-7 business days for processing"
+    ],
+    "notes": "May require ID verification for certain requests",
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "Radaris",
+    "slug": "radaris",
+    "optOutUrl": "https://radaris.com/control-privacy",
+    "difficulty": "hard",
+    "timeEstimate": "15 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Visit the Radaris privacy control page",
+      "Search for your profile listing",
+      "Click on your profile and select removal option",
+      "Fill out the online removal form",
+      "If the form fails, email customer-service@radaris.com with your profile link",
+      "Follow up if removal is not completed within 7 days"
+    ],
+    "notes": "May need multiple follow-ups to ensure complete removal",
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "TruePeopleSearch",
+    "slug": "truepeoplesearch",
+    "optOutUrl": "https://www.truepeoplesearch.com/removal",
+    "difficulty": "medium",
+    "timeEstimate": "10 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Go to the TruePeopleSearch removal page",
+      "Enter your name, city, and state",
+      "Enter your email address",
+      "Complete the CAPTCHA verification",
+      "Confirm the removal request",
+      "You may need to complete multiple CAPTCHAs"
+    ],
+    "notes": null,
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "FastPeopleSearch",
+    "slug": "fastpeoplesearch",
+    "optOutUrl": "https://www.fastpeoplesearch.com/optout",
+    "difficulty": "easy",
+    "timeEstimate": "5 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Visit fastpeoplesearch.com",
+      "Scroll to the bottom and find the 'Do Not Sell My Info' link",
+      "Click through to the opt-out form",
+      "Fill in your information and complete the CAPTCHA",
+      "Submit the form"
+    ],
+    "notes": null,
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "USSearch",
+    "slug": "ussearch",
+    "optOutUrl": "https://www.ussearch.com/privacylock",
+    "difficulty": "medium",
+    "timeEstimate": "10 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Visit the USSearch Privacy Lock page",
+      "Search for your listing on the site",
+      "Copy your profile URL",
+      "Submit the opt-out form with your details",
+      "Follow the instructions sent to your email"
+    ],
+    "notes": null,
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "Pipl",
+    "slug": "pipl",
+    "optOutUrl": "https://pipl.com/help/remove",
+    "difficulty": "hard",
+    "timeEstimate": "15-20 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Understand that Pipl is an aggregator, not a primary data source",
+      "Visit Pipl's help page for removal information",
+      "Identify the original source sites where your data appears",
+      "Submit removal requests to each source site individually",
+      "After source removals, Pipl will eventually stop displaying your data"
+    ],
+    "notes": "Aggregator \u2014 must remove data from original source sites individually",
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "InstantCheckmate",
+    "slug": "instantcheckmate",
+    "optOutUrl": "https://www.instantcheckmate.com/opt-out/",
+    "difficulty": "easy",
+    "timeEstimate": "5 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Visit the InstantCheckmate opt-out page",
+      "Search for your record by name and state",
+      "Select your listing from the results",
+      "Confirm the removal request",
+      "Check your email for a verification link and click it"
+    ],
+    "notes": null,
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "ThatsThem",
+    "slug": "thatsthem",
+    "optOutUrl": "https://thatsthem.com/optout",
+    "difficulty": "easy",
+    "timeEstimate": "5 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Visit the ThatsThem opt-out page",
+      "Search for your listing on the site",
+      "Select your record from the results",
+      "Fill out the direct opt-out form",
+      "Submit the form"
+    ],
+    "notes": null,
+    "region": "international",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "Acxiom",
+    "slug": "acxiom",
+    "optOutUrl": "https://isapps.acxiom.com/optout/optout.aspx",
+    "difficulty": "medium",
+    "timeEstimate": "10 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Visit the Acxiom opt-out page",
+      "Fill in your personal information (name, address, email)",
+      "Select the types of data you want removed",
+      "Submit the opt-out form",
+      "Alternatively, call (877) 774-2094 for phone-based removal"
+    ],
+    "notes": null,
+    "region": "international",
+    "category": "marketing",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "Oracle/Datalogix",
+    "slug": "oracle-datalogix",
+    "optOutUrl": "https://www.oracle.com/legal/privacy/privacy-choices.html",
+    "difficulty": "hard",
+    "timeEstimate": "15 min",
+    "lastVerified": "2025-01",
+    "steps": [
+      "Visit Oracle's privacy choices page",
+      "Scroll to the data suppression section",
+      "Fill out the opt-out form with your personal information",
+      "Submit your request",
+      "Expect processing to take several weeks due to corporate review process"
+    ],
+    "notes": "Complex corporate process \u2014 may take longer than other brokers",
+    "region": "international",
+    "category": "marketing",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "Krak",
+    "slug": "krak",
+    "optOutUrl": "https://opdater.krak.dk/person",
+    "difficulty": "easy",
+    "timeEstimate": "5-10 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Contact your telecom provider (TDC, Telia, Telenor, etc.) and request your number be set to hidden (hemmeligt nummer)",
+      "Alternatively, go to opdater.krak.dk and log in with MitID",
+      "Select 'Remove my information' and confirm",
+      "Changes take up to 2 weeks to propagate across Krak, De Gule Sider, and 118.dk"
+    ],
+    "notes": "Krak and De Gule Sider share the same database \u2014 removing from one removes from both",
+    "region": "denmark",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": true
+  },
+  {
+    "name": "De Gule Sider",
+    "slug": "degulesider",
+    "optOutUrl": "https://www.degulesider.dk/hjaelp/personsoeg",
+    "difficulty": "easy",
+    "timeEstimate": "5-10 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Contact your telecom provider and request a hidden number",
+      "Or visit degulesider.dk/hjaelp/personsoeg and follow the instructions",
+      "Shares database with Krak \u2014 removal from one covers both",
+      "Takes up to 2 weeks for changes to appear"
+    ],
+    "notes": "Same owner as Krak \u2014 cascade removal via telecom is easiest",
+    "region": "denmark",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": true
+  },
+  {
+    "name": "118.dk (TDC)",
+    "slug": "118dk",
+    "optOutUrl": "https://www.118.dk",
+    "difficulty": "easy",
+    "timeEstimate": "5 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Contact your telecom provider and request your number be hidden",
+      "Updates within 1 working day after your provider processes the request",
+      "No direct opt-out form \u2014 removal happens through your telecom provider"
+    ],
+    "notes": "Automatically removed when you request a hidden number from your telecom provider",
+    "region": "denmark",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "Robinsonlisten",
+    "slug": "robinsonlisten",
+    "optOutUrl": "https://www.borger.dk",
+    "difficulty": "easy",
+    "timeEstimate": "5 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Log in to borger.dk with MitID",
+      "Navigate to CPR self-service",
+      "Register for the Robinson List (marketing opt-out)",
+      "Takes up to 3 months for all companies to stop marketing"
+    ],
+    "notes": "Official marketing opt-out via CPR registry \u2014 companies are legally required to check",
+    "region": "denmark",
+    "category": "marketing",
+    "dataTypes": ["name", "address"],
+    "requiresNationalId": true
+  },
+  {
+    "name": "Navne/adressebeskyttelse",
+    "slug": "navneadressebeskyttelse",
+    "optOutUrl": "https://www.borger.dk/bolig-og-flytning/flytning_oversigt/navne-og-adressebeskyttelse",
+    "difficulty": "easy",
+    "timeEstimate": "10 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Log in to borger.dk with MitID",
+      "Navigate to 'Navne- og adressebeskyttelse'",
+      "Apply for name and address protection",
+      "Protection lasts 1 year and must be renewed annually"
+    ],
+    "notes": "Government-level name/address protection \u2014 must be renewed every year",
+    "region": "denmark",
+    "category": "government",
+    "dataTypes": ["name", "address"],
+    "requiresNationalId": true
+  },
+  {
+    "name": "Experian/RKI",
+    "slug": "experian-rki",
+    "optOutUrl": "https://www.dininfo.dk",
+    "difficulty": "hard",
+    "timeEstimate": "15-20 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Visit dininfo.dk to check your credit report",
+      "If you have a negative registration, it is automatically deleted after 5 years or when debt is paid",
+      "For disputes, email dpodenmark@experian.com",
+      "Include your CPR number and explain the issue",
+      "Experian has 30 days to respond under GDPR"
+    ],
+    "notes": "Credit registry \u2014 negative entries automatically removed after 5 years or debt settlement",
+    "region": "denmark",
+    "category": "credit",
+    "dataTypes": ["name", "address", "credit-history"],
+    "requiresNationalId": true
+  },
+  {
+    "name": "Dun & Bradstreet",
+    "slug": "dun-bradstreet",
+    "optOutUrl": "https://www.dnb.com/en-us/why-dnb/data-transparency.html",
+    "difficulty": "medium",
+    "timeEstimate": "10-15 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Visit the D&B data transparency page",
+      "Submit a privacy request form",
+      "Specify what data you want removed or corrected",
+      "D&B will respond within 30 days under GDPR"
+    ],
+    "notes": "Primarily business data \u2014 personal data removal possible via GDPR request",
+    "region": "denmark",
+    "category": "credit",
+    "dataTypes": ["name", "business-data"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "Google (Ret til sletning)",
+    "slug": "google-right-to-be-forgotten",
+    "optOutUrl": "https://support.google.com/legal/answer/10769224",
+    "difficulty": "medium",
+    "timeEstimate": "10-15 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Visit Google's removal request page",
+      "Select 'Remove information you see in Google Search'",
+      "Choose the type of content for removal",
+      "Submit URLs you want delisted from EU search results",
+      "Google reviews each request individually \u2014 processing time varies"
+    ],
+    "notes": "EU right to be forgotten \u2014 only delists from EU Google results, does not remove from source",
+    "region": "denmark",
+    "category": "search-engine",
+    "dataTypes": ["name", "search-results"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "Eniro",
+    "slug": "eniro",
+    "optOutUrl": "https://www.eniro.se",
+    "difficulty": "easy",
+    "timeEstimate": "5-10 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Visit eniro.se",
+      "Log in with BankID to verify your identity",
+      "Request removal of your personal information",
+      "Processing takes 4-10 working days"
+    ],
+    "notes": "BankID required for identity verification",
+    "region": "sweden",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": true
+  },
+  {
+    "name": "Hitta",
+    "slug": "hitta",
+    "optOutUrl": "https://www.hitta.se",
+    "difficulty": "easy",
+    "timeEstimate": "5-10 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Visit hitta.se",
+      "Log in with BankID to verify your identity",
+      "Navigate to your profile and request removal",
+      "Processing takes 4-10 working days"
+    ],
+    "notes": "BankID required for identity verification",
+    "region": "sweden",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": true
+  },
+  {
+    "name": "Ratsit",
+    "slug": "ratsit",
+    "optOutUrl": "https://www.ratsit.se",
+    "difficulty": "hard",
+    "timeEstimate": "15-30 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Visit ratsit.se",
+      "Log in with BankID",
+      "Request removal of your personal data",
+      "Be aware that Ratsit holds a publishing certificate (utgivningsbevis) and may refuse full deletion",
+      "Processing can take up to 30 days"
+    ],
+    "notes": "Has utgivningsbevis \u2014 may legally refuse GDPR deletion requests under Swedish constitutional exemption",
+    "region": "sweden",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone", "income"],
+    "requiresNationalId": true
+  },
+  {
+    "name": "MrKoll",
+    "slug": "mrkoll",
+    "optOutUrl": "https://www.mrkoll.se",
+    "difficulty": "hard",
+    "timeEstimate": "15-30 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Visit mrkoll.se",
+      "Log in with BankID",
+      "Request to hide your phone number and address",
+      "Note: MrKoll has utgivningsbevis \u2014 they can only hide phone and address, not fully delete your record"
+    ],
+    "notes": "Has utgivningsbevis \u2014 can only hide phone/address, cannot fully delete. GDPR deletion may be refused.",
+    "region": "sweden",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone", "income"],
+    "requiresNationalId": true
+  },
+  {
+    "name": "Merinfo",
+    "slug": "merinfo",
+    "optOutUrl": "https://www.merinfo.se/ta-bort-mina-uppgifter",
+    "difficulty": "medium",
+    "timeEstimate": "10 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Visit merinfo.se/ta-bort-mina-uppgifter",
+      "Log in with BankID",
+      "Submit your removal request",
+      "Processing takes a few working days"
+    ],
+    "notes": "BankID removal process \u2014 relatively straightforward",
+    "region": "sweden",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": true
+  },
+  {
+    "name": "Birthday",
+    "slug": "birthday",
+    "optOutUrl": "https://www.birthday.se/persontogden",
+    "difficulty": "medium",
+    "timeEstimate": "10 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Visit birthday.se/persontogden",
+      "Use the removal form or email info@birthday.se",
+      "Request deletion of your personal data",
+      "Note: logged-in users may still see cached data temporarily"
+    ],
+    "notes": "Email info@birthday.se for fastest processing",
+    "region": "sweden",
+    "category": "directory",
+    "dataTypes": ["name", "birthday"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "1881",
+    "slug": "1881",
+    "optOutUrl": "https://www.1881.no",
+    "difficulty": "medium",
+    "timeEstimate": "10 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Visit 1881.no",
+      "Find your listing in the directory",
+      "Contact 1881 directly to request removal",
+      "Submit a GDPR-based deletion request via their contact form or email"
+    ],
+    "notes": "Standard GDPR-based deletion process",
+    "region": "norway",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "Gulesider",
+    "slug": "gulesider",
+    "optOutUrl": "https://www.gulesider.no",
+    "difficulty": "medium",
+    "timeEstimate": "10 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Visit gulesider.no",
+      "Find your listing",
+      "Contact their privacy team to request removal",
+      "Cite GDPR Article 17 (right to erasure) in your request"
+    ],
+    "notes": "Standard GDPR-based deletion \u2014 contact privacy team directly",
+    "region": "norway",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  },
+  {
+    "name": "Fonecta",
+    "slug": "fonecta",
+    "optOutUrl": "https://www.fonecta.fi",
+    "difficulty": "medium",
+    "timeEstimate": "10 min",
+    "lastVerified": "2025-06",
+    "steps": [
+      "Email tietosuoja@fonecta.com with your removal request",
+      "Include your full name and phone number",
+      "Cite GDPR Article 17 in your request",
+      "Fonecta has 30 days to respond under GDPR"
+    ],
+    "notes": "Email tietosuoja@fonecta.com for GDPR-based deletion",
+    "region": "finland",
+    "category": "directory",
+    "dataTypes": ["name", "address", "phone"],
+    "requiresNationalId": false
+  }
+]
